@@ -1,0 +1,5 @@
+rootProject.name = 'FindMe'
+include 'functional-tests', 'findme-database-utils'
+
+include 'functional-tests'
+
