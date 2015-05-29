@@ -35,17 +35,23 @@ public class RegistrationQuery {
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
             //STEP 4: Execute a query and add results to list
-            String sql = "INSERT INTO persons (firstName, lastName, emailAddress, personSalt, personHashPassword, jobTitle, location) " +
-                    "VALUES(?, ?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO persons (firstName, lastName, emailAddress, photo, phoneNumber, personSalt, personHashPassword, jobTitle, currentProject, currentTeam, location, details, status) " +
+                    "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, preRegPerson.getFirstName());
             pstmt.setString(2, preRegPerson.getLastName());
             pstmt.setString(3, preRegPerson.getEmail());
-            pstmt.setString(4, preRegPerson.getSalt());
-            pstmt.setString(5, preRegPerson.getPassword());
-            pstmt.setString(6, preRegPerson.getJobTitle());
-            pstmt.setString(7, preRegPerson.getLocation());
+            pstmt.setString(4, preRegPerson.getPhoto());
+            pstmt.setString(5, preRegPerson.getPhoneNumber());
+            pstmt.setString(6, preRegPerson.getSalt());
+            pstmt.setString(7, preRegPerson.getPassword());
+            pstmt.setString(8, preRegPerson.getJobTitle());
+            pstmt.setString(9, preRegPerson.getTeamName());
+            pstmt.setString(10, preRegPerson.getCurrentProject());
+            pstmt.setString(11, preRegPerson.getLocation());
+            pstmt.setString(12, preRegPerson.getDetails());
+            pstmt.setString(13, preRegPerson.getStatus());
 
             pstmt.executeUpdate();
 

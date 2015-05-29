@@ -3,25 +3,23 @@ package uk.co.o2.findme.model;
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 import uk.co.o2.findme.dao.PersonDAO;
-import uk.co.o2.findme.dao.PersonLoginDAO;
 import uk.co.o2.findme.dao.SaltAndHashDAO;
-import uk.co.o2.findme.dao.StickerBookPersonDAO;
-import uk.co.o2.findme.mapper.SearchResultsPersonModelMapper;
 
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.security.SecureRandom;
-import java.sql.SQLException;
-import java.util.List;
+import javax.crypto.*;
+import javax.crypto.spec.SecretKeySpec;
+import java.security.*;
 
 /**
  * Created by ee on 13/05/15.
  */
 public class PersonModel {
 
-    PersonsQuery personsQuery = new PersonsQuery();
+    private PersonsQuery personsQuery = new PersonsQuery();
+
+    private static final String ALGO = "AES";
+    private static final byte[] keyValue =
+            new byte[] { 'd', 'q', 'h', 'G', 'D', 'x', 'a','j', 'i', 'C', 'l','S', 'Q', 'Z', 'g', 'y' };
+
 
     public PersonModel() {
 
@@ -32,23 +30,68 @@ public class PersonModel {
         return person;
     }
 
+    public boolean isValidPersonID(int personID) {
+        boolean response = personsQuery.isValidPersonId(personID);
+        return response;
+    }
+
+    public String getPersonIdByEmail(String email) {
+        String personId = personsQuery.getPersonIdBy(email);
+        return personId;
+    }
+
+    public String getNumberOfPeopleInDatabase() {
+        String number = personsQuery.getCountOfPersonsTable();
+        return number;
+    }
+
+    public void updatePersonDetails(int personId,
+                                       String firstName,
+                                       String lastName,
+                                       String email,
+                                       String phoneNumber,
+                                       String picture,
+                                       String jobTitle,
+                                       String teamName,
+                                       String project,
+                                       String location,
+                                       String details,
+                                       String status) {
+
+
+        personsQuery.updateUser(firstName, lastName, email, phoneNumber, picture, jobTitle, teamName, project, location, details, status, personId);
+    }
+
+
+    public String getEncryptedSessionId(String email) throws Exception {
+        Key key = generateKey();
+        Cipher c = Cipher.getInstance(ALGO);
+        c.init(Cipher.ENCRYPT_MODE, key);
+        byte[] encVal = c.doFinal(email.getBytes());
+        String encryptedValue = new BASE64Encoder().encode(encVal);
+        System.out.println(encryptedValue);
+        return encryptedValue;
+    }
+
+    public static String decryptSessionId(String encryptedData) throws Exception {
+        Key key = generateKey();
+        Cipher c = Cipher.getInstance(ALGO);
+        c.init(Cipher.DECRYPT_MODE, key);
+        byte[] decordedValue = new BASE64Decoder().decodeBuffer(encryptedData);
+        byte[] decValue = c.doFinal(decordedValue);
+        String decryptedValue = new String(decValue);
+        return decryptedValue;
+    }
+    private static Key generateKey() throws Exception {
+        Key key = new SecretKeySpec(keyValue, ALGO);
+        return key;
+    }
+
+
     public SaltAndHashDAO getSaltFor(String email) {
         SaltAndHashDAO saltAndPassword = personsQuery.getPasswordAndSaltFor(email);
         return saltAndPassword;
     }
-
-/*    public boolean checkLoginDetails(String email, String password) {
-        PersonLoginDAO person = personsQuery.getLoginDetailsOf(email);
-
-
-        if(person.getEmail().equals(email) && person.getPersonEncryptedPassword().equals(sDigest)) {
-            person = null;
-            return true;
-        } else {
-            person = null;
-            return false;
-        }
-    }*/
 
     public boolean isEmailAddressExistingForLogin(String email) {
         int numberOfPersons = personsQuery.emailMatchCheck(email);

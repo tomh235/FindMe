@@ -5,16 +5,48 @@
         <title>Digital Sticker Book | Find Me</title>
         <link rel="icon" type="image/ico" href="/assets/images/favicon.ico" />
         <link rel="stylesheet" media="screen" href="/assets/css/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-        <script src="/assets/javascripts/jquery-1.9.0.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     </head>
     <body>
-        <div class="containerTop">
-            <div class="row top">
-                <p><span id="mainUser"><i class="fa fa-user"></i></span> Hello <#if !(personInformation.firstName)??> Elliot Massey <#else> <em>${personInformation.firstName}</em> </#if> <br> Pre-Alpha <span class="floatRight">FIND ME</span></p>
+        <!-- Fixed navbar -->
+                <nav class="navbar navbar-default navbar-fixed-top">
+                  <div class="container">
+                    <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="/">Find Me</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                      <ul class="nav navbar-nav">
+                        <li><a href="/">Home</a></li>
+                        <li class="active"><a href="/stickerBook">Sticker book <span class="badge">1060</span></a></li>
+                        <li><a href="/competition">Daily Competition <span class="badge"><i class="fa fa-exclamation"></i></span></a></li>
+                        <li><a href="/leaderboards">Leaderboards</a></li>
+                      </ul>
 
-            </div>
-        </div>
+                      <ul class="nav navbar-nav navbar-right">
+                              <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Hello ${(currentUser.firstName)!""} <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                  <li><a href="/account">Your Account</a></li>
+                                  <li><a href="/logout">Logout</a></li>
+                                </ul>
+                              </li>
+                            </ul>
+                    </div><!--/.nav-collapse -->
+                  </div>
+                </nav>
+                <br>
+                <br>
+                <br>
 
         <div class="container">
             <div class="col-md-12">
@@ -23,7 +55,7 @@
                         <h1>Your Digital Sticker Book</h1>
                         <br>
                         <p>This is your very own sticker book (yay)! Scan the QR codes of the people you meet to get their pictures in your book.</p>
-                        <p>Remember! By doing so you get the chance to rank up on the <a href="">leaderboard</a> and win prizes!</p>
+                        <p>Remember! By doing so you get the chance to rank up on the <a href="/leaderboards">leaderboard</a> and win prizes!</p>
                         <p>Oh jolly! I've forgotten the rules for this and what the special bonus stuff is! <a href="">Help!</a></p>
                         <hr>
                         <br>

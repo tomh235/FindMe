@@ -5,16 +5,33 @@
         <title>Find Me | Login to Find 'em!</title>
         <link rel="icon" type="image/ico" href="/assets/images/favicon.ico" />
         <link rel="stylesheet" media="screen" href="/assets/css/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-        <script src="/assets/javascripts/jquery-1.9.0.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     </head>
     <body>
-        <div class="containerTop">
-            <div class="row top">
-                <p><span id="mainUser"><i class="fa fa-user"></i></span> Hello <br> Please Login <span class="floatRight">FIND ME</span></p>
+        <!-- Fixed navbar -->
+                <nav class="navbar navbar-default navbar-fixed-top">
+                  <div class="container">
+                    <div class="navbar-header">
+                      <a class="navbar-brand" href="/">Find Me</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                      <ul class="nav navbar-nav">
 
-            </div>
-        </div>
+                      </ul>
+                      <ul class="nav navbar-nav navbar-right">
+                        <p class="navbar-text">Welcome to Find Me</p>
+                      </ul>
+                    </div><!--/.nav-collapse -->
+                  </div>
+                </nav>
+                <br>
+                <br>
+                <br>
+                <br>
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 form">

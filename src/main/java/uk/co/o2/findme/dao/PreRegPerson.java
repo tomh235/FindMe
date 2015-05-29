@@ -12,31 +12,43 @@ public class PreRegPerson implements SearchResultsModel {
     private String firstName;
     private String lastName;
     private String email;
+    private String photo;
+    private String phoneNumber;
     private String salt;
     private String password;
     private String jobTitle;
-    private String location;
     private String currentProject;
+    private String location;
+    private String details;
+    private String status;
     private String teamName;
 
     public PreRegPerson(String firstName,
                         String lastName,
                         String email,
+                        String photo,
+                        String phoneNumber,
                         String salt,
                         String password,
                         String jobTitle,
                         String location,
                         String currentProject,
+                        String details,
+                        String status,
                         String teamName)
     {
         this.firstName = firstName;
         this.lastName = lastName;
+        this.photo = photo;
+        this.phoneNumber = phoneNumber;
         this.email = email;
         this.salt = salt;
         this.password = password;
         this.jobTitle = jobTitle;
         this.location = location;
         this.currentProject = currentProject;
+        this.details = details;
+        this.status = status;
         this.teamName = teamName;
     }
 
@@ -77,6 +89,26 @@ public class PreRegPerson implements SearchResultsModel {
 
     public String getTeamName() {
         return teamName;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getCurrentProject() {
+        return currentProject;
+    }
+
+    public String getDetails() {
+        return details;
+    }
+
+    public String getStatus() {
+        return status;
     }
 }
 

@@ -1,6 +1,3 @@
-@import "bootstrap.css";
-@import "font-awesome.css";
-
 /* General */
 
 body { padding-bottom: 80px;}
@@ -118,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .containerTop .floatRight {
     padding-right:50px;
-    float:right;
+    float:right !important;
 }
 
 .profile-message {
@@ -160,7 +157,21 @@ form[role=form] .submit{
 }
 
 .signup-pic {
-    width: 320px;
+    width: 240px;
+}
+
+#formInline {
+    display:inline-block;
+}
+
+#accountSubmit {
+    width:40%;
+    margin: 0 auto;
+}
+
+.centered {
+    margin: 0 auto;
+    text-align:center;
 }
 
 .glyphicon-remove {
@@ -198,8 +209,28 @@ form[role=form] .submit{
 /* Search - Person Details */
 
 .find-me {
-    font-size: 2em;
+    font-size: 1.8em !important;
     padding-right: 20px;
+}
+
+.panel-spacing {
+    margin-top:10%;
+}
+
+#gameInfoToggle {
+    color: #337AB7;
+    cursor: pointer;
+}
+
+#quote {
+    text-align: center;
+    font-style: italic;
+}
+
+.guessForm {
+    margin: 0 auto;
+    width:50%;
+    text-align:center;
 }
 
 /* Single person */

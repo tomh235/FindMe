@@ -5,17 +5,33 @@
         <title>Registration | Find Me</title>
         <link rel="icon" type="image/ico" href="/assets/images/favicon.ico" />
         <link rel="stylesheet" media="screen" href="/assets/css/main.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-        <script src="/assets/javascripts/jquery-1.9.0.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     </head>
     <body>
-        <div class="containerTop">
-            <div class="row top">
-                <p><span id="mainUser"><i class="fa fa-user"></i></span> Hello <#if !(personInformation.firstName)??> New User <#else> <em>${personInformation.firstName}</em> </#if> <br> Pre-Alpha <span class="floatRight">FIND ME</span></p>
+        <!-- Fixed navbar -->
+                <nav class="navbar navbar-default navbar-fixed-top">
+                  <div class="container">
+                    <div class="navbar-header">
+                      <a class="navbar-brand" href="/">Find Me</a>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                      <ul class="nav navbar-nav">
 
-            </div>
-        </div>
-
+                      </ul>
+                      <ul class="nav navbar-nav navbar-right">
+                        <p class="navbar-text">Welcome to Find Me</p>
+                      </ul>
+                    </div><!--/.nav-collapse -->
+                  </div>
+                </nav>
+                <br>
+                <br>
+                <br>
+                <br>
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-md-offset-3 form">
@@ -74,41 +90,39 @@
                         </div>
 
                         <div class="form-group">
-                            <#if (errors["team"])??>
-                                <div class="alert alert-danger">
-                                    <span class="glyphicon glyphicon-remove"></span>${errors["team"]}
-                                </div>
-                            </#if>
-
-                            <label>Current Team</label>
-                                <select class="form-control" name="team" required>
-                                        <option value="The Lab">The Lab</option>
-                                        <option value="Digital ID">Digital ID</option>
-                                        <option value="Kentucky">Kentucky</option>
-                                        <option value="My O2">My O2</option>
-                                        <option value="Kanban">Kanban</option>
-                                        <option value="SMIP">SMIP</option>
-                                        <option value="Support Team">Support Team</option>
-                                        <option value="Business Website">Business Website</option>
-                                        <option value="SMB Digital Small Change Scrum">SMB Digital Small Change Scrum</option>
-                                        <option value="CVOS">CVOS</option>
-                                        <option value="Online at the Highstreet">Online at the Highstreet</option>
-                                </select>
+                            <label>Mobile number</label>
+                            <input class="form-control" type="text" name="phoneNumber" placeholder="Enter your number" value="${(personInformation.phoneNumber)!""}" required>
                         </div>
 
+                        <label>Current Team</label>
+                            <select class="form-control" name="team" required>
+                                    <option value="The Lab">The Lab</option>
+                                    <option value="Digital ID">Digital ID</option>
+                                    <option value="Kentucky">Kentucky</option>
+                                    <option value="My O2">My O2</option>
+                                    <option value="Kanban">Kanban</option>
+                                    <option value="SMIP">SMIP</option>
+                                    <option value="Support Team">Support Team</option>
+                                    <option value="Business Website">Business Website</option>
+                                    <option value="SMB Digital Small Change Scrum">SMB Digital Small Change Scrum</option>
+                                    <option value="CVOS">CVOS</option>
+                                    <option value="Online at the Highstreet">Online at the Highstreet</option>
+                            </select>
+
+                        <br>
                         <div class="form-group">
                             <label>Job Title</label>
                             <input class="form-control" type="text" name="role" placeholder="Enter job title" value="${(personInformation.jobTitle)!""}" required>
                         </div>
 
                         <div class="form-group">
-                            <#if (errors["personInformation.project"])??>
+                            <#if (errors["personInformation.currentProject"])??>
                                 <div class="alert alert-danger">
-                                    <span class="glyphicon glyphicon-remove"></span>${errors["personInformation.project"]}
+                                    <span class="glyphicon glyphicon-remove"></span>${errors["personInformation.currentProject"]}
                                 </div>
                             </#if>
                             <label>Your Current Project</label>
-                            <input class="form-control" type="text" name="project" placeholder="Enter your project's name" value="${(personInformation.project)!""}" required>
+                            <input class="form-control" type="text" name="currentProject" placeholder="Enter your project's name" value="${(personInformation.currentProject)!""}" required>
                         </div>
 
                         <div class="form-group">
@@ -125,6 +139,18 @@
                                 <option value="Pune">Pune</option>
                                 <option value="WFH">WFH</option>
                             </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Link to your picture (maybe use your linkedin picture)</label>
+                            <p>Example: http://xxxx.com/xxxxxx.jpg</p>
+                            <input class="form-control" type="url" name="photo" placeholder="Enter link to picture" value="${(personInformation.picture)!""}" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>A bit about yourself</label>
+                            <p>Example: "I like cats, been a developer in Ecom for 5 years and try to hide my balding spot."</p>
+                            <input class="form-control" type="text" name="details" placeholder="A bit about yourself" value="${(personInformation.details)!""}" required>
                         </div>
 
                         <input id="submit" class="btn btn-primary btn-lg btn-block" type="submit">

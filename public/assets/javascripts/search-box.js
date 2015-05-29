@@ -9,6 +9,7 @@ var autoSearchOnKeyUp = function (input, target, result) {
                     recentness++;
                     searchBar.className="input-group input-group-lg entry-area-searching";
                     $("#tags").hide();
+                    $(".centered").hide();
                     $("#quickLinks").hide();
                    var requestRecentness = recentness;
                    var params = {};
@@ -23,7 +24,7 @@ var autoSearchOnKeyUp = function (input, target, result) {
             }  else if (searchstring.length == 0) {
                 searchBar.className="input-group input-group-lg entry-area-start";
                 $("#tags").show();
-                $("#quickLinks").show();
+                $(".centered").show();
             result.empty();
 
             }

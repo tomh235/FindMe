@@ -17,7 +17,7 @@ public class RegistrationModel {
     public boolean registerAccount(PreRegPerson preRegPerson) {
         if(!isEmailMatching(preRegPerson.getEmail())) {
             registrationQuery.registerUser(preRegPerson);
-            registrationQuery.registerAgainstTeam(preRegPerson);
+            //registrationQuery.registerAgainstTeam(preRegPerson);
             return true;
         } else {
             return false;

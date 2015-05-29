@@ -3,6 +3,7 @@ package uk.co.o2.findme.application;
 
 import uk.co.o2.findme.controller.OverviewController;
 import uk.co.o2.findme.mapper.SearchResultsPersonModelMapper;
+import uk.co.o2.findme.model.PersonModel;
 import uk.co.o2.findme.model.RegistrationModel;
 import uk.co.o2.findme.model.SaltAndHashModel;
 import uk.co.o2.findme.model.SearchModel;
@@ -14,16 +15,19 @@ final public class FindMe {
     public final SearchModel searchModel;
     public final RegistrationModel registrationModel;
     public final SaltAndHashModel saltAndHashModel;
+    public final PersonModel personModel;
 
 
     private FindMe(
             SearchModel searchModel,
             RegistrationModel registrationModel,
-            SaltAndHashModel saltAndHashModel
+            SaltAndHashModel saltAndHashModel,
+            PersonModel personModel
     ) {
         this.searchModel = searchModel;
         this.registrationModel = registrationModel;
         this.saltAndHashModel = saltAndHashModel;
+        this.personModel = personModel;
     }
 
     public static FindMe findme() {
@@ -40,7 +44,8 @@ final public class FindMe {
 
         RegistrationModel registrationModel = new RegistrationModel();
         SaltAndHashModel saltAndHashModel = new SaltAndHashModel();
+        PersonModel personModel = new PersonModel();
 
-        return new FindMe(searchModel, registrationModel, saltAndHashModel);
+        return new FindMe(searchModel, registrationModel, saltAndHashModel, personModel);
     }
 }

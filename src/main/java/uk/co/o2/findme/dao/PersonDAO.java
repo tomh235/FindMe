@@ -16,7 +16,8 @@ public class PersonDAO implements SearchResultsModel {
     private String areaCode;
     private String phoneNumber;
     private String jobTitle;
-    private String skypeName;
+    private String details;
+    private String currentProject;
     private String location;
     private String teamName;
     private String statusInTeam;
@@ -29,7 +30,8 @@ public class PersonDAO implements SearchResultsModel {
                      String areaCode,
                      String phoneNumber,
                      String jobTitle,
-                     String skypeName,
+                     String details,
+                     String currentProject,
                      String location,
                      String teamName,
                      String statusInTeam) {
@@ -42,7 +44,8 @@ public class PersonDAO implements SearchResultsModel {
         this.areaCode = areaCode;
         this.phoneNumber = phoneNumber;
         this.jobTitle = jobTitle;
-        this.skypeName = skypeName;
+        this.details = details;
+        this.currentProject = currentProject;
         this.location = location;
         this.teamName = teamName;
         this.statusInTeam = statusInTeam;
@@ -83,12 +86,16 @@ public class PersonDAO implements SearchResultsModel {
         return jobTitle;
     }
 
-    public String getSkypeName() {
-        return skypeName;
+    public String getDetails() {
+        return details;
     }
 
     public String getLocation() {
         return location;
+    }
+
+    public String getCurrentProject() {
+        return currentProject;
     }
 
     public String getTeamName() {

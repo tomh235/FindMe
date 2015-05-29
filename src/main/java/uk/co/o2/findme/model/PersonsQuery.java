@@ -1,9 +1,6 @@
 package uk.co.o2.findme.model;
 
-import uk.co.o2.findme.dao.PersonDAO;
-import uk.co.o2.findme.dao.PersonLoginDAO;
-import uk.co.o2.findme.dao.SaltAndHashDAO;
-import uk.co.o2.findme.dao.StickerBookPersonDAO;
+import uk.co.o2.findme.dao.*;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -38,10 +35,13 @@ public class PersonsQuery {
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
             //STEP 4: Execute a query and add results to list
-            String sql = "SELECT p.idPerson, p.firstName, p.lastName, p.photo, p.emailAddress, p.areaCode, p.phoneNumber, p.jobTitle, p.skypeName, p.location, t.teamName, pt.status FROM persons p " +
+            /*String sql = "SELECT p.idPerson, p.firstName, p.lastName, p.photo, p.emailAddress, p.areaCode, p.phoneNumber, p.jobTitle, p.details, p.currentProject, p.location, t.teamName, pt.status FROM persons p " +
             "LEFT JOIN personTeams pt ON p.idPerson = pt.Persons_idPerson " +
             "JOIN teams t ON pt.Teams_idTeams = t.idTeams " +
-            "WHERE CONCAT(p.firstName, ' ', p.lastName) LIKE ?";
+            "WHERE CONCAT(p.firstName, ' ', p.lastName) LIKE ?";*/
+
+            String sql = "SELECT p.idPerson, p.firstName, p.lastName, p.photo, p.emailAddress, p.areaCode, p.phoneNumber, p.jobTitle, p.details, p.currentTeam, p.currentProject, p.location, p.currentTeam, p.status FROM persons p " +
+                    "WHERE CONCAT(p.firstName, ' ', p.lastName) LIKE ?";
 
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, "%" + nameSearch + "%");
@@ -60,10 +60,11 @@ public class PersonsQuery {
                                 rs.getString("p.areaCode"),
                                 rs.getString("p.phoneNumber"),
                                 rs.getString("p.jobTitle"),
-                                rs.getString("p.skypeName"),
+                                rs.getString("p.details"),
+                                rs.getString("p.currentProject"),
                                 rs.getString("p.location"),
-                                rs.getString("t.teamName"),
-                                rs.getString("pt.status"));
+                                rs.getString("p.currentTeam"),
+                                rs.getString("p.status"));
                 personList.add(person);
             }
 
@@ -95,7 +96,6 @@ public class PersonsQuery {
     }
 
 
-
     public PersonDAO searchByPersonIdOf(int personID) {
         Connection conn = null;
         PreparedStatement pstmt = null;
@@ -110,9 +110,12 @@ public class PersonsQuery {
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
             //STEP 4: Execute a query and add results to list
-            String sql = "SELECT p.idPerson, p.firstName, p.lastName, p.photo, p.emailAddress, p.areaCode, p.phoneNumber, p.jobTitle, p.skypeName, p.location, t.teamName, pt.status FROM persons p " +
+/*            String sql = "SELECT p.idPerson, p.firstName, p.lastName, p.photo, p.emailAddress, p.areaCode, p.phoneNumber, p.jobTitle, p.details, p.currentProject, p.location, t.teamName, pt.status FROM persons p " +
             "LEFT JOIN personTeams pt ON p.idPerson = pt.Persons_idPerson " +
             "JOIN teams t ON pt.Teams_idTeams = t.idTeams " +
+            "WHERE p.idPerson = ?";*/
+
+            String sql = "SELECT p.idPerson, p.firstName, p.lastName, p.photo, p.emailAddress, p.areaCode, p.phoneNumber, p.jobTitle, p.details, p.currentTeam, p.currentProject, p.location, p.currentTeam, p.status FROM persons p " +
             "WHERE p.idPerson = ?";
 
             pstmt = conn.prepareStatement(sql);
@@ -124,17 +127,18 @@ public class PersonsQuery {
             {
                 person = new PersonDAO(
                                 rs.getInt("p.idPerson"),
-                                rs.getString("p.firstName"),
+                        rs.getString("p.firstName"),
                                 rs.getString("p.lastName"),
                                 rs.getString("p.photo"),
                                 rs.getString("p.emailAddress"),
                                 rs.getString("p.areaCode"),
                                 rs.getString("p.phoneNumber"),
                                 rs.getString("p.jobTitle"),
-                                rs.getString("p.skypeName"),
+                                rs.getString("p.details"),
+                                rs.getString("p.currentProject"),
                                 rs.getString("p.location"),
-                                rs.getString("t.teamName"),
-                                rs.getString("pt.status"));
+                                rs.getString("p.currentTeam"),
+                                rs.getString("p.status"));
             }
 
             //STEP 5: Clean-up environment
@@ -164,12 +168,10 @@ public class PersonsQuery {
         return person;
     }
 
-
-
-    public PersonDAO getAllDetailsFor(int personID) {
+    public boolean isValidPersonId(int personID) {
         Connection conn = null;
         PreparedStatement pstmt = null;
-        PersonDAO person = null;
+        boolean result = false;
 
         try{
             //STEP 2: Register JDBC driver
@@ -180,10 +182,7 @@ public class PersonsQuery {
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
             //STEP 4: Execute a query and add results to list
-            String sql = "SELECT p.idPerson, p.firstName, p.lastName, p.photo, p.emailAddress, p.areaCode, p.phoneNumber, p.jobTitle, p.skypeName, p.location, t.teamName, pt.status FROM persons p " +
-            "LEFT JOIN personTeams pt ON p.idPerson = pt.Persons_idPerson " +
-            "JOIN teams t ON pt.Teams_idTeams = t.idTeams " +
-            "WHERE p.idPerson = ?";
+            String sql = "SELECT idPerson FROM persons WHERE idPerson = ?";
 
             pstmt = conn.prepareStatement(sql);
             pstmt.setInt(1, personID);
@@ -192,19 +191,7 @@ public class PersonsQuery {
 
             while(rs.next())
             {
-                person = new PersonDAO(
-                                rs.getInt("p.idPerson"),
-                                rs.getString("p.firstName"),
-                                rs.getString("p.lastName"),
-                                rs.getString("p.photo"),
-                                rs.getString("p.emailAddress"),
-                                rs.getString("p.areaCode"),
-                                rs.getString("p.phoneNumber"),
-                                rs.getString("p.jobTitle"),
-                                rs.getString("p.skypeName"),
-                                rs.getString("p.location"),
-                                rs.getString("t.teamName"),
-                                rs.getString("pt.status"));
+                result = true;
             }
 
             //STEP 5: Clean-up environment
@@ -214,9 +201,11 @@ public class PersonsQuery {
         }catch(SQLException se){
             //Handle errors for JDBC
             se.printStackTrace();
+            return false;
         }catch(Exception e){
             //Handle errors for Class.forName
             e.printStackTrace();
+            return false;
         }finally{
             //finally block used to close resources
             try{
@@ -229,12 +218,74 @@ public class PersonsQuery {
                     conn.close();
             }catch(SQLException se){
                 se.printStackTrace();
+                return false;
             }//end finally try
         }//end try
-        return person;
+        return result;
     }
 
+    public boolean updateUser(String firstName, String lastName, String email, String phoneNumber, String picture, String jobTitle, String teamName, String project, String location, String details, String status, int personId) {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
 
+        try{
+            //STEP 2: Register JDBC driver
+            Class.forName("com.mysql.jdbc.Driver");
+
+            //STEP 3: Open a connection
+            System.out.println("Connecting to database...");
+            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+
+            //STEP 4: Execute a query and add results to list
+            String sql = "UPDATE persons " +
+                    "SET firstName=?, lastName=?, emailAddress=?, photo=?, phoneNumber=?, jobTitle=?, currentTeam=?, currentProject=?, location=?, details=?, status=? " +
+                    "WHERE idPerson=?";
+
+
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, firstName);
+            pstmt.setString(2, lastName);
+            pstmt.setString(3, email);
+            pstmt.setString(4, picture);
+            pstmt.setString(5, phoneNumber);
+            pstmt.setString(6, jobTitle);
+            pstmt.setString(7, teamName);
+            pstmt.setString(8, project);
+            pstmt.setString(9, location);
+            pstmt.setString(10, details);
+            pstmt.setString(11, "Active");
+            pstmt.setInt(12, personId);
+
+            pstmt.executeUpdate();
+
+            //STEP 5: Clean-up environment
+            pstmt.close();
+            conn.close();
+            return true;
+        }catch(SQLException se){
+            //Handle errors for JDBC
+            se.printStackTrace();
+            return false;
+        }catch(Exception e){
+            //Handle errors for Class.forName
+            e.printStackTrace();
+            return false;
+        }finally{
+            //finally block used to close resources
+            try{
+                if(pstmt != null)
+                    pstmt.close();
+            }catch(SQLException se2){
+            }// nothing we can do
+            try{
+                if(conn != null)
+                    conn.close();
+            }catch(SQLException se){
+                se.printStackTrace();
+                return false;
+            }//end finally try
+        }//end try
+    }
 
     public StickerBookPersonDAO getAllSBPersonsFor(int personID) {
         Connection conn = null;
@@ -291,7 +342,6 @@ public class PersonsQuery {
     }
 
 
-
     public int emailMatchCheck(String email) {
         Connection conn = null;
         PreparedStatement pstmt = null;
@@ -346,7 +396,110 @@ public class PersonsQuery {
         return numberOfRowsReturned;
     }
 
+    public String getPersonIdBy(String email) {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        String personId = null;
 
+        try{
+            //STEP 2: Register JDBC driver
+            Class.forName("com.mysql.jdbc.Driver");
+
+            //STEP 3: Open a connection
+            System.out.println("Connecting to database...");
+            conn = DriverManager.getConnection(DB_URL, DatabaseConfiguration.db_username2, DatabaseConfiguration.db_pass2);
+
+            //STEP 4: Execute a query and add results to list
+            String sql = "SELECT idPerson FROM persons " +
+            "WHERE emailAddress = ?";
+
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, email);
+
+            ResultSet rs = pstmt.executeQuery();
+
+            while(rs.next())
+            {
+                personId = rs.getString("idPerson");
+            }
+
+            //STEP 5: Clean-up environment
+            rs.close();
+            pstmt.close();
+            conn.close();
+        }catch(SQLException se){
+            //Handle errors for JDBC
+            se.printStackTrace();
+        }catch(Exception e){
+            //Handle errors for Class.forName
+            e.printStackTrace();
+        }finally{
+            //finally block used to close resources
+            try{
+                if(pstmt != null)
+                    pstmt.close();
+            }catch(SQLException se2){
+            }// nothing we can do
+            try{
+                if(conn != null)
+                    conn.close();
+            }catch(SQLException se){
+                se.printStackTrace();
+            }//end finally try
+        }//end try
+        return personId;
+    }
+
+    public String getCountOfPersonsTable() {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        String number = null;
+
+        try{
+            //STEP 2: Register JDBC driver
+            Class.forName("com.mysql.jdbc.Driver");
+
+            //STEP 3: Open a connection
+            System.out.println("Connecting to database...");
+            conn = DriverManager.getConnection(DB_URL, DatabaseConfiguration.db_username2, DatabaseConfiguration.db_pass2);
+
+            //STEP 4: Execute a query and add results to list
+            String sql = "SELECT COUNT(idPerson) FROM persons;";
+
+            pstmt = conn.prepareStatement(sql);
+            ResultSet rs = pstmt.executeQuery();
+
+            while(rs.next())
+            {
+                number = rs.getString("COUNT(idPerson)");
+            }
+
+            //STEP 5: Clean-up environment
+            rs.close();
+            pstmt.close();
+            conn.close();
+        }catch(SQLException se){
+            //Handle errors for JDBC
+            se.printStackTrace();
+        }catch(Exception e){
+            //Handle errors for Class.forName
+            e.printStackTrace();
+        }finally{
+            //finally block used to close resources
+            try{
+                if(pstmt != null)
+                    pstmt.close();
+            }catch(SQLException se2){
+            }// nothing we can do
+            try{
+                if(conn != null)
+                    conn.close();
+            }catch(SQLException se){
+                se.printStackTrace();
+            }//end finally try
+        }//end try
+        return number;
+    }
 
     public SaltAndHashDAO getPasswordAndSaltFor(String email) {
         Connection conn = null;
@@ -359,7 +512,7 @@ public class PersonsQuery {
 
             //STEP 3: Open a connection
             System.out.println("Connecting to database...");
-            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+            conn = DriverManager.getConnection(DB_URL, DatabaseConfiguration.db_username2, DatabaseConfiguration.db_pass2);
 
             //STEP 4: Execute a query and add results to list
             String sql = "SELECT personSalt, personHashPassword FROM persons " +

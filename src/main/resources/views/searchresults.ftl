@@ -52,7 +52,7 @@
                             <h5 class="text-center teamName">
                                 Bath Road, Slough
                             </h5>
-                        <i class="fa fa-envelope-o"></i> &nbsp; <i class="fa fa-skype"></i> &nbsp; <i class="fa fa-phone"></i>
+                        <i class="fa fa-envelope-o"></i> &nbsp; <i class="fa fa-phone"></i>
                         </#if>
                         </a>
                     </div>
