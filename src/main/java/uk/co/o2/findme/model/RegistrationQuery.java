@@ -3,7 +3,8 @@ package uk.co.o2.findme.model;
 import uk.co.o2.findme.dao.PreRegPerson;
 
 import java.sql.*;
-import java.sql.Date;
+import java.util.Date;
+import java.util.Calendar;
 
 
 /**
@@ -47,8 +48,8 @@ public class RegistrationQuery {
             pstmt.setString(6, preRegPerson.getSalt());
             pstmt.setString(7, preRegPerson.getPassword());
             pstmt.setString(8, preRegPerson.getJobTitle());
-            pstmt.setString(9, preRegPerson.getTeamName());
-            pstmt.setString(10, preRegPerson.getCurrentProject());
+            pstmt.setString(9, preRegPerson.getCurrentProject());
+            pstmt.setString(10, preRegPerson.getTeamName());
             pstmt.setString(11, preRegPerson.getLocation());
             pstmt.setString(12, preRegPerson.getDetails());
             pstmt.setString(13, preRegPerson.getStatus());
@@ -80,11 +81,7 @@ public class RegistrationQuery {
         }//end try
     }
 
-
-    public void registerAgainstTeam(PreRegPerson preRegPerson) {
-        getPersonID(preRegPerson.getEmail());
-        getTeamID(preRegPerson.getTeamName());
-        Date date = getCurrentDate();
+    public void setupGameData(int personID) {
 
         Connection conn = null;
         PreparedStatement pstmt3 = null;
@@ -99,17 +96,14 @@ public class RegistrationQuery {
 
             //STEP 4: Execute a query and add results to list
 
-        String sql3 = "INSERT INTO personTeams (Persons_idPerson, Teams_idTeams, startDate, endDate, status) " +
-                "VALUES(?, ?, ?, ?, ?)";
+            String sql3 = "INSERT INTO gameData (idPerson, lastGameEntry) " +
+                    "VALUES(?, ?)";
 
-        pstmt3 = conn.prepareStatement(sql3);
-        pstmt3.setInt(1, personID);
-        pstmt3.setInt(2, teamID);
-        pstmt3.setDate(3, date);
-        pstmt3.setDate(4, date);
-        pstmt3.setString(5, "Active");
+            pstmt3 = conn.prepareStatement(sql3);
+            pstmt3.setInt(1, personID);
+            pstmt3.setDate(2, getCurrentDateMinusDay());
 
-        pstmt3.executeUpdate();
+            pstmt3.executeUpdate();
 
             //STEP 5: Clean-up environment
             pstmt3.close();
@@ -136,9 +130,10 @@ public class RegistrationQuery {
         }//end try
     }
 
-    public void getPersonID(String email) {
+    public int getPersonID(String email) {
         Connection conn = null;
         PreparedStatement pstmt = null;
+        int id = 0;
 
         try {
             //STEP 2: Register JDBC driver
@@ -158,7 +153,7 @@ public class RegistrationQuery {
             ResultSet rs = pstmt.executeQuery();
 
             while (rs.next()) {
-                personID = rs.getInt("idPerson");
+                id = rs.getInt("idPerson");
             }
 
             //STEP 5: Clean-up environment
@@ -185,6 +180,7 @@ public class RegistrationQuery {
                 se.printStackTrace();
             }//end finally try
         }//end try
+        return id;
     }
 
     public void getTeamID(String teamName) {
@@ -238,8 +234,11 @@ public class RegistrationQuery {
         }//end
     }
 
-    private static java.sql.Date getCurrentDate() {
-        java.util.Date today = new java.util.Date();
-        return new java.sql.Date(today.getTime());
+    private static java.sql.Date getCurrentDateMinusDay() {
+        Calendar cal = Calendar.getInstance();
+        cal.add(Calendar.DATE, -1);
+        Date dateMinusOne = cal.getTime();
+        java.sql.Date sqlDate = new java.sql.Date(dateMinusOne.getTime());
+        return sqlDate;
     }
 }

@@ -97,5 +97,7 @@
     <orderEntry type="library" scope="TEST" name="Gradle: org.neo4j.app:neo4j-server:1.9.8" level="project" />
     <orderEntry type="library" name="Gradle: bouncycastle:bcprov-jdk16:140" level="project" />
     <orderEntry type="library" name="Gradle: com.sun.jersey:jersey-core:1.9" level="project" />
+    <orderEntry type="library" name="Gradle: net.glxn.qrgen:javase:2.0" level="project" />
+    <orderEntry type="library" name="Gradle: net.glxn.qrgen:core:2.0" level="project" />
   </component>
 </module>

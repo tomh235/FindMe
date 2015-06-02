@@ -36,9 +36,13 @@ public class OverviewController {
                 } else {
                     final PersonDAO currentUser = personModel.getPersonById(Integer.parseInt(loginCookie.getValue()));
                     final String populationCount = personModel.getNumberOfPeopleInDatabase();
+                    final String numberOfStickers = personModel.getStickerBookNumber(Integer.parseInt(loginCookie.getValue()));
+                    final boolean hasPlayed = personModel.getIfCompetedFor(Integer.parseInt(loginCookie.getValue()));
                     Map<String, Object> model = new HashMap();
                     model.put("currentUser", currentUser);
                     model.put("popCount", populationCount);
+                    model.put("stickerCount", numberOfStickers);
+                    model.put("hasPlayed", hasPlayed);
                     return Response.ok().entity(new Viewable("/homepage.ftl", model)).build();
                 }
             }

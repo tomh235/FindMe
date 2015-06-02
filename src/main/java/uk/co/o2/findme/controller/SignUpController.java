@@ -75,6 +75,7 @@ public class SignUpController {
             model.put("statusError", happyStatus);
             model.put("statusIcon", true);
             model.put("currentUser", firstName);
+            model.put("hasPlayed", false);
             //String sessionValue = personModel.getEncryptedSessionId(email);
             String sessionValue = personModel.getPersonIdByEmail(email);
             NewCookie loginCookie = new NewCookie("findmeLoggedIn", sessionValue);

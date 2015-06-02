@@ -1,12 +1,20 @@
 apply plugin: 'java'
+apply plugin: 'idea'
 
-sourceCompatibility = 1.5
-version = '1.0'
-
-repositories {
-    mavenCentral()
+task ('integrationRemote', dependsOn: ['test'], description: 'runs functional tests against facewalltest.herokuapp.com') << {
+    //   Outputs.upToDateWhen { false }
 }
 
+task ('integrationLocal', type: Test, description: 'runs functional tests against local build') {
+    //   Outputs.upToDateWhen { false }
+}
+
+
 dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile "org.neo4j:neo4j-kernel:1.9.8"
+    testCompile "org.neo4j:neo4j-rest-graphdb:1.9"
+    testCompile "org.seleniumhq.selenium:selenium-java:2.45.0"
+    testCompile "org.hamcrest:hamcrest-all:1.1"
+    testCompile "junit:junit:4.11"
+    testCompile "org.mockito:mockito-all:1.9.5"
 }

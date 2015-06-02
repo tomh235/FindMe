@@ -160,6 +160,13 @@ form[role=form] .submit{
     width: 240px;
 }
 
+#o2-logo {
+    width: 25px;
+}
+
+.spacing {
+    margin:2%;
+}
 #formInline {
     display:inline-block;
 }

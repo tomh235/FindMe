@@ -37,6 +37,8 @@
                 <div class="col-md-6 col-md-offset-3 form">
                     <h1>Account Registration</h1>
                     <br>
+                    <p>Have an existing account -> <a href="/login">Login</a></p>
+                    <br>
                     <p>Use this form to register for an account to be created for yourself when the Find Me application is complete.</p>
                     <hr>
                     <br>

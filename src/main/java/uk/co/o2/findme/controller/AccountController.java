@@ -1,14 +1,19 @@
 package uk.co.o2.findme.controller;
 
+import net.glxn.qrgen.core.image.ImageType;
+import net.glxn.qrgen.javase.QRCode;
 import org.glassfish.jersey.server.mvc.Viewable;
 import uk.co.o2.findme.dao.PersonDAO;
 import uk.co.o2.findme.model.PersonModel;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.Cookie;
-import javax.ws.rs.core.MediaType;
+
 import javax.ws.rs.core.Response;
-import java.net.URI;
+
+import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
 
 @Path("/account")
 public class AccountController {
@@ -26,7 +31,13 @@ public class AccountController {
                 } else {
                     final int personID = Integer.parseInt(loginCookie.getValue());
                     final PersonDAO person = personModel.getPersonById(personID);
-                    return Response.ok().entity(new Viewable("/account.ftl", person)).build();
+                    final String numberOfStickers = personModel.getStickerBookNumber(Integer.parseInt(loginCookie.getValue()));
+                    final boolean hasPlayed = personModel.getIfCompetedFor(Integer.parseInt(loginCookie.getValue()));
+                    Map<String, Object> model = new HashMap();
+                    model.put("person", person);
+                    model.put("stickerCount", numberOfStickers);
+                    model.put("hasPlayed", hasPlayed);
+                    return Response.ok().entity(new Viewable("/account.ftl", model)).build();
                 }
             }
         } catch (NullPointerException e) {
@@ -53,7 +64,24 @@ public class AccountController {
         personModel.updatePersonDetails(personID, firstName, lastName, email, phoneNumber, picture, jobTitle, team, project, location, details, "Active");
 
         final PersonDAO person = personModel.getPersonById(personID);
+        final String numberOfStickers = personModel.getStickerBookNumber(Integer.parseInt(loginCookie.getValue()));
+        final boolean hasPlayed = personModel.getIfCompetedFor(Integer.parseInt(loginCookie.getValue()));
+        Map<String, Object> model = new HashMap();
+        model.put("person", person);
+        model.put("stickerCount", numberOfStickers);
+        model.put("hasPlayed", hasPlayed);
         return Response.ok().entity(new Viewable("/account.ftl", person)).build();
+    }
 
+    @GET
+    @Path("/generate")
+    public Response getQRCode(@CookieParam(value = "findmeLoggedIn") Cookie loginCookie) {
+
+        ByteArrayOutputStream file = QRCode.from("http://localhost:9000/person/" + loginCookie.getValue()).to(ImageType.JPG).stream();
+
+
+        Map<String, Object> model = new HashMap();
+        model.put("qrcode", file);
+        return Response.ok().entity(new Viewable("/qrcode.ftl", model)).build();
     }
 }

@@ -42,7 +42,7 @@
                             ${result.jobTitle}
                         </h5>
                         <h5 class="text-center teamName">
-                            ${result.teamName} - ${result.statusInTeam}
+                            ${result.teamName}
                         </h5>
                         <#if result.location??>
                             <h5 class="text-center teamName">

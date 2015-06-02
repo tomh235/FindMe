@@ -6,6 +6,7 @@ apply plugin: 'java'
 buildscript {
     repositories {
         maven { url "http://jcenter.bintray.com/" }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
     }
 
     dependencies {
@@ -18,6 +19,7 @@ allprojects {
         mavenCentral()
         maven { url "http://m2.neo4j.org/content/repositories/releases/" }
         maven { url "http://mvnrepository.com" }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
     }
 }
 
@@ -73,6 +75,8 @@ dependencies {
     compile 'javax.el:javax.el-api:2.2.4'
     compile 'org.glassfish.web:javax.el:2.2.4'
     // end Hibernate Validator dependencies
+
+    compile 'net.glxn.qrgen:javase:2.0'
 
     def slf4jVersion = "1.7.4"
     compile "org.slf4j:slf4j-api:${slf4jVersion}"

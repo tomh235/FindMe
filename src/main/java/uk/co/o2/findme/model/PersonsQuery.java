@@ -95,6 +95,127 @@ public class PersonsQuery {
         return personList;
     }
 
+    public List<GameDataObject> getAllPersonsForGameLeaderBoard() {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        List<GameDataObject> personList = new ArrayList<GameDataObject>();
+
+        try{
+            //STEP 2: Register JDBC driver
+            Class.forName("com.mysql.jdbc.Driver");
+
+            //STEP 3: Open a connection
+            System.out.println("Connecting to database...");
+            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+
+            //STEP 4: Execute a query and add results to list
+            String sql = "SELECT gd.idPerson, p.firstName, p.lastName, p.jobTitle, gd.gameScore FROM gameData gd " +
+                    "LEFT JOIN persons p ON gd.idPerson = p.idPerson " +
+                    "ORDER BY gd.gameScore DESC";
+
+            pstmt = conn.prepareStatement(sql);
+
+            ResultSet rs = pstmt.executeQuery();
+
+            while(rs.next())
+            {
+                GameDataObject person =
+                        new GameDataObject(
+                                rs.getInt("gd.idPerson"),
+                                rs.getString("p.firstName"),
+                                rs.getString("p.lastName"),
+                                rs.getString("p.jobTitle"),
+                                rs.getInt("gd.gameScore"));
+                personList.add(person);
+            }
+
+            //STEP 5: Clean-up environment
+            rs.close();
+            pstmt.close();
+            conn.close();
+        }catch(SQLException se){
+            //Handle errors for JDBC
+            se.printStackTrace();
+        }catch(Exception e){
+            //Handle errors for Class.forName
+            e.printStackTrace();
+        }finally{
+            //finally block used to close resources
+            try{
+                if(pstmt != null)
+                    pstmt.close();
+            }catch(SQLException se2){
+            }// nothing we can do
+            try{
+                if(conn != null)
+                    conn.close();
+            }catch(SQLException se){
+                se.printStackTrace();
+            }//end finally try
+        }//end try
+        return personList;
+    }
+
+    public List<StickerBookDataObject> getAllPersonsForSBLeaderBoard() {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        List<StickerBookDataObject> personList = new ArrayList<StickerBookDataObject>();
+
+        try{
+            //STEP 2: Register JDBC driver
+            Class.forName("com.mysql.jdbc.Driver");
+
+            //STEP 3: Open a connection
+            System.out.println("Connecting to database...");
+            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+
+            //STEP 4: Execute a query and add results to list
+            String sql = "SELECT gd.idPerson, p.firstName, p.lastName, p.jobTitle, gd.stickerbookScore FROM gameData gd " +
+                    "LEFT JOIN persons p ON gd.idPerson = p.idPerson " +
+                    "ORDER BY gd.stickerbookScore DESC";
+
+            pstmt = conn.prepareStatement(sql);
+
+            ResultSet rs = pstmt.executeQuery();
+
+            while(rs.next())
+            {
+                StickerBookDataObject person =
+                        new StickerBookDataObject(
+                                rs.getInt("gd.idPerson"),
+                                rs.getString("p.firstName"),
+                                rs.getString("p.lastName"),
+                                rs.getString("p.jobTitle"),
+                                rs.getInt("gd.stickerbookScore"));
+                personList.add(person);
+            }
+
+            //STEP 5: Clean-up environment
+            rs.close();
+            pstmt.close();
+            conn.close();
+        }catch(SQLException se){
+            //Handle errors for JDBC
+            se.printStackTrace();
+        }catch(Exception e){
+            //Handle errors for Class.forName
+            e.printStackTrace();
+        }finally{
+            //finally block used to close resources
+            try{
+                if(pstmt != null)
+                    pstmt.close();
+            }catch(SQLException se2){
+            }// nothing we can do
+            try{
+                if(conn != null)
+                    conn.close();
+            }catch(SQLException se){
+                se.printStackTrace();
+            }//end finally try
+        }//end try
+        return personList;
+    }
 
     public PersonDAO searchByPersonIdOf(int personID) {
         Connection conn = null;
@@ -168,6 +289,64 @@ public class PersonsQuery {
         return person;
     }
 
+    public String getPersonStringOfTheDay() {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        String details = null;
+
+        try{
+            //STEP 2: Register JDBC driver
+            Class.forName("com.mysql.jdbc.Driver");
+
+            //STEP 3: Open a connection
+            System.out.println("Connecting to database...");
+            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+
+            //STEP 4: Execute a query and add results to list
+/*            String sql = "SELECT p.idPerson, p.firstName, p.lastName, p.photo, p.emailAddress, p.areaCode, p.phoneNumber, p.jobTitle, p.details, p.currentProject, p.location, t.teamName, pt.status FROM persons p " +
+            "LEFT JOIN personTeams pt ON p.idPerson = pt.Persons_idPerson " +
+            "JOIN teams t ON pt.Teams_idTeams = t.idTeams " +
+            "WHERE p.idPerson = ?";*/
+
+            String sql = "SELECT p.details FROM persons p " +
+            "WHERE p.isDailyPerson = true";
+
+            pstmt = conn.prepareStatement(sql);
+
+            ResultSet rs = pstmt.executeQuery();
+
+            while(rs.next())
+            {
+                details = rs.getString("p.details");
+            }
+
+            //STEP 5: Clean-up environment
+            rs.close();
+            pstmt.close();
+            conn.close();
+        }catch(SQLException se){
+            //Handle errors for JDBC
+            se.printStackTrace();
+        }catch(Exception e){
+            //Handle errors for Class.forName
+            e.printStackTrace();
+        }finally{
+            //finally block used to close resources
+            try{
+                if(pstmt != null)
+                    pstmt.close();
+            }catch(SQLException se2){
+            }// nothing we can do
+            try{
+                if(conn != null)
+                    conn.close();
+            }catch(SQLException se){
+                se.printStackTrace();
+            }//end finally try
+        }//end try
+        return details;
+    }
+
     public boolean isValidPersonId(int personID) {
         Connection conn = null;
         PreparedStatement pstmt = null;
@@ -223,6 +402,273 @@ public class PersonsQuery {
         }//end try
         return result;
     }
+
+    public String getNumberOfStickersFor(int personID) {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        String numberOfStickers = null;
+
+        try{
+            //STEP 2: Register JDBC driver
+            Class.forName("com.mysql.jdbc.Driver");
+
+            //STEP 3: Open a connection
+            System.out.println("Connecting to database...");
+            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+
+            //STEP 4: Execute a query and add results to list
+            String sql = "SELECT COUNT(idPerson) FROM personStickerBookConnection WHERE idPerson = ?";
+            //String sql2 = "SELECT lastGameEntry FROM leaderboards WHERE idPerson = ?";
+
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setInt(1, personID);
+
+            ResultSet rs = pstmt.executeQuery();
+
+            while(rs.next())
+            {
+                numberOfStickers = rs.getString("COUNT(idPerson)");
+            }
+
+            //STEP 5: Clean-up environment
+            rs.close();
+            pstmt.close();
+            conn.close();
+        }catch(SQLException se){
+            //Handle errors for JDBC
+            se.printStackTrace();
+        }catch(Exception e){
+            //Handle errors for Class.forName
+            e.printStackTrace();
+        }finally{
+            //finally block used to close resources
+            try{
+                if(pstmt != null)
+                    pstmt.close();
+            }catch(SQLException se2){
+            }// nothing we can do
+            try{
+                if(conn != null)
+                    conn.close();
+            }catch(SQLException se){
+                se.printStackTrace();
+            }//end finally try
+        }//end try
+        return numberOfStickers;
+    }
+
+    public String getDateOfLastPlayed(int personID) {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        String dateOfLastPlayed = null;
+
+        try{
+            //STEP 2: Register JDBC driver
+            Class.forName("com.mysql.jdbc.Driver");
+
+            //STEP 3: Open a connection
+            System.out.println("Connecting to database...");
+            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+
+            //STEP 4: Execute a query and add results to list
+            String sql = "SELECT lastGameEntry FROM gameData WHERE idPerson = ?";
+
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setInt(1, personID);
+
+            ResultSet rs = pstmt.executeQuery();
+
+            while(rs.next())
+            {
+                dateOfLastPlayed = rs.getString("lastGameEntry");
+            }
+
+            //STEP 5: Clean-up environment
+            rs.close();
+            pstmt.close();
+            conn.close();
+        }catch(SQLException se){
+            //Handle errors for JDBC
+            se.printStackTrace();
+        }catch(Exception e){
+            //Handle errors for Class.forName
+            e.printStackTrace();
+        }finally{
+            //finally block used to close resources
+            try{
+                if(pstmt != null)
+                    pstmt.close();
+            }catch(SQLException se2){
+            }// nothing we can do
+            try{
+                if(conn != null)
+                    conn.close();
+            }catch(SQLException se){
+                se.printStackTrace();
+            }//end finally try
+        }//end try
+        return dateOfLastPlayed;
+    }
+
+    public String submitEntry(int personID, String entry) {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+
+        try{
+            //STEP 2: Register JDBC driver
+            Class.forName("com.mysql.jdbc.Driver");
+
+            //STEP 3: Open a connection
+            System.out.println("Connecting to database...");
+            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+
+            //STEP 4: Execute a query and add results to list
+            String sql = "INSERT INTO competitionData VALUES (?,?)";
+
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setInt(1, personID);
+            pstmt.setString(2, entry);
+
+            pstmt.executeUpdate();
+
+            //STEP 5: Clean-up environment
+            pstmt.close();
+            conn.close();
+            return "success";
+        }catch(SQLException se){
+            //Handle errors for JDBC
+            se.printStackTrace();
+            return "fail";
+        }catch(Exception e){
+            //Handle errors for Class.forName
+            e.printStackTrace();
+            return "fail";
+        }finally{
+            //finally block used to close resources
+            try{
+                if(pstmt != null)
+                    pstmt.close();
+            }catch(SQLException se2){
+            }// nothing we can do
+            try{
+                if(conn != null)
+                    conn.close();
+            }catch(SQLException se){
+                se.printStackTrace();
+                return "fail";
+            }//end finally try
+
+        }//end try
+    }
+
+    public boolean updateGameData(int personID, String currentDate) {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+
+        try{
+            //STEP 2: Register JDBC driver
+            Class.forName("com.mysql.jdbc.Driver");
+
+            //STEP 3: Open a connection
+            System.out.println("Connecting to database...");
+            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+
+            //STEP 4: Execute a query and add results to list
+            String sql = "UPDATE gameData " +
+                    "SET gameScore=gameScore+1, lastGameEntry=? " +
+                    "WHERE idPerson=?";
+
+
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, currentDate);
+            pstmt.setInt(2, personID);
+
+
+            pstmt.executeUpdate();
+
+            //STEP 5: Clean-up environment
+            pstmt.close();
+            conn.close();
+            return true;
+        }catch(SQLException se){
+            //Handle errors for JDBC
+            se.printStackTrace();
+            return false;
+        }catch(Exception e){
+            //Handle errors for Class.forName
+            e.printStackTrace();
+            return false;
+        }finally{
+            //finally block used to close resources
+            try{
+                if(pstmt != null)
+                    pstmt.close();
+            }catch(SQLException se2){
+            }// nothing we can do
+            try{
+                if(conn != null)
+                    conn.close();
+            }catch(SQLException se){
+                se.printStackTrace();
+                return false;
+            }//end finally try
+        }//end try
+    }
+
+
+    public boolean updateStickerBookData(int personID) {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+
+        try{
+            //STEP 2: Register JDBC driver
+            Class.forName("com.mysql.jdbc.Driver");
+
+            //STEP 3: Open a connection
+            System.out.println("Connecting to database...");
+            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+
+            //STEP 4: Execute a query and add results to list
+            String sql = "UPDATE gameData " +
+                    "SET stickerbookScore=stickerbookScore+1 " +
+                    "WHERE idPerson=?";
+
+
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setInt(1, personID);
+
+
+            pstmt.executeUpdate();
+
+            //STEP 5: Clean-up environment
+            pstmt.close();
+            conn.close();
+            return true;
+        }catch(SQLException se){
+            //Handle errors for JDBC
+            se.printStackTrace();
+            return false;
+        }catch(Exception e){
+            //Handle errors for Class.forName
+            e.printStackTrace();
+            return false;
+        }finally{
+            //finally block used to close resources
+            try{
+                if(pstmt != null)
+                    pstmt.close();
+            }catch(SQLException se2){
+            }// nothing we can do
+            try{
+                if(conn != null)
+                    conn.close();
+            }catch(SQLException se){
+                se.printStackTrace();
+                return false;
+            }//end finally try
+        }//end try
+    }
+
 
     public boolean updateUser(String firstName, String lastName, String email, String phoneNumber, String picture, String jobTitle, String teamName, String project, String location, String details, String status, int personId) {
         Connection conn = null;

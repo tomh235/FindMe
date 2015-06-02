@@ -22,13 +22,22 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                       </button>
+                      <a class="navbar-brand" href="/"><img alt="O2" id="o2-logo" src="http://static.o2.co.uk/shared/img/logo-o2.svg"></a>
                       <a class="navbar-brand" href="/">Find Me</a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                       <ul class="nav navbar-nav">
                         <li><a href="/">Home</a></li>
-                        <li class="active"><a href="/stickerBook">Sticker book <span class="badge">1060</span></a></li>
-                        <li><a href="/competition">Daily Competition <span class="badge"><i class="fa fa-exclamation"></i></span></a></li>
+                        <li class="active"><a href="/stickerBook">Sticker book <span class="badge">${(stickerCount)!"-"}</span></a></li>
+                        <li>
+                            <a href="/competition">Daily Competition
+                                <#if hasPlayed == true>
+
+                                <#elseif hasPlayed == false>
+                                    <span class="badge"><i class="fa fa-exclamation"></i></span>
+                                </#if>
+                            </a>
+                        </li>
                         <li><a href="/leaderboards">Leaderboards</a></li>
                       </ul>
 

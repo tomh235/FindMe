@@ -34,8 +34,12 @@ public class PersonController {
                     final int personID = Integer.parseInt(id);
                     final PersonDAO currentUser = personModel.getPersonById(Integer.parseInt(loginCookie.getValue()));
                     final PersonDAO person = personModel.getPersonById(personID);
+                    final String numberOfStickers = personModel.getStickerBookNumber(Integer.parseInt(loginCookie.getValue()));
+                    final boolean hasPlayed = personModel.getIfCompetedFor(Integer.parseInt(loginCookie.getValue()));
                     model.put("currentUser", currentUser);
                     model.put("person", person);
+                    model.put("stickerCount", numberOfStickers);
+                    model.put("hasPlayed", hasPlayed);
                     return Response.ok().entity(new Viewable("/singleperson.ftl", model)).build();
                 }
             }

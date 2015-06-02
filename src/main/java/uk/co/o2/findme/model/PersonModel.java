@@ -2,12 +2,17 @@ package uk.co.o2.findme.model;
 
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
+import uk.co.o2.findme.dao.GameDataObject;
 import uk.co.o2.findme.dao.PersonDAO;
 import uk.co.o2.findme.dao.SaltAndHashDAO;
+import uk.co.o2.findme.dao.StickerBookDataObject;
 
 import javax.crypto.*;
 import javax.crypto.spec.SecretKeySpec;
 import java.security.*;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
 
 /**
  * Created by ee on 13/05/15.
@@ -28,6 +33,53 @@ public class PersonModel {
     public PersonDAO getPersonById(int personID) {
         PersonDAO person = personsQuery.searchByPersonIdOf(personID);
         return person;
+    }
+
+    public String getStickerBookNumber(int personID) {
+        return personsQuery.getNumberOfStickersFor(personID);
+    }
+
+    public boolean getIfCompetedFor(int personID) {
+        Date dt = new Date();
+
+        SimpleDateFormat sdf =
+                new SimpleDateFormat("yyyy-MM-dd");
+
+        String currentDate = sdf.format(dt);
+        String dateofLastPlay = personsQuery.getDateOfLastPlayed(personID);
+        System.out.println(currentDate + " | " + dateofLastPlay);
+
+        return dateofLastPlay.equals(currentDate);
+    }
+
+    public String getCompetitionPerson() {
+        String personGuess = personsQuery.getPersonStringOfTheDay();
+        return personGuess;
+    }
+
+    public List<GameDataObject> getGameDataLeaderBoards() {
+        List<GameDataObject> gameDataLBList = personsQuery.getAllPersonsForGameLeaderBoard();
+        return gameDataLBList;
+    }
+
+    public List<StickerBookDataObject> getStickerBookLeaderBoards() {
+        List<StickerBookDataObject> stickerBookLBList = personsQuery.getAllPersonsForSBLeaderBoard();
+        return stickerBookLBList;
+    }
+
+    public String submitEntry(int personID, String entry) {
+        Date dt = new Date();
+
+        SimpleDateFormat sdf =
+                new SimpleDateFormat("yyyy-MM-dd");
+
+        String currentDate = sdf.format(dt);
+        String personGuess = personsQuery.submitEntry(personID, entry);
+        System.out.println(personGuess);
+        if(personGuess.equals("success")) {
+            personsQuery.updateGameData(personID, currentDate);
+        }
+        return personGuess;
     }
 
     public boolean isValidPersonID(int personID) {
