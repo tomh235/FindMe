@@ -2,10 +2,7 @@ package uk.co.o2.findme.model;
 
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
-import uk.co.o2.findme.dao.GameDataObject;
-import uk.co.o2.findme.dao.PersonDAO;
-import uk.co.o2.findme.dao.SaltAndHashDAO;
-import uk.co.o2.findme.dao.StickerBookDataObject;
+import uk.co.o2.findme.dao.*;
 
 import javax.crypto.*;
 import javax.crypto.spec.SecretKeySpec;
@@ -55,6 +52,11 @@ public class PersonModel {
     public String getCompetitionPerson() {
         String personGuess = personsQuery.getPersonStringOfTheDay();
         return personGuess;
+    }
+
+    public List<StickerBookPersonDAO> getPeopleInStickerBookFor(int personID) {
+        List<StickerBookPersonDAO> list = personsQuery.getAllSBPersonsFor(personID);
+        return list;
     }
 
     public List<GameDataObject> getGameDataLeaderBoards() {

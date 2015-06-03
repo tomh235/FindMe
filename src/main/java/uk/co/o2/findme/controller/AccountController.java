@@ -33,10 +33,12 @@ public class AccountController {
                     final PersonDAO person = personModel.getPersonById(personID);
                     final String numberOfStickers = personModel.getStickerBookNumber(Integer.parseInt(loginCookie.getValue()));
                     final boolean hasPlayed = personModel.getIfCompetedFor(Integer.parseInt(loginCookie.getValue()));
+                    final String QRCodeLink = "localhost:9000/person/" + loginCookie.getValue();
                     Map<String, Object> model = new HashMap();
                     model.put("person", person);
                     model.put("stickerCount", numberOfStickers);
                     model.put("hasPlayed", hasPlayed);
+                    model.put("QRCodeLink", QRCodeLink);
                     return Response.ok().entity(new Viewable("/account.ftl", model)).build();
                 }
             }

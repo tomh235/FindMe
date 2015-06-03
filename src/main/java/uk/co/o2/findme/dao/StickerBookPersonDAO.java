@@ -12,27 +12,17 @@ public class StickerBookPersonDAO implements SearchResultsModel {
     private String firstName;
     private String lastName;
     private String picture;
-    private String avatar;
-    private boolean isStarPerson;
-    private boolean isConnected;
 
     public StickerBookPersonDAO(int personId,
                                 String firstName,
                                 String lastName,
-                                String picture,
-                                String avatar,
-                                boolean isStarPerson,
-                                boolean isConnected) {
+                                String picture) {
 
         this.personId = personId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.picture = picture;
-        this.avatar = avatar;
-        this.isStarPerson = isStarPerson;
-        this.isConnected = isConnected;
     }
-
 
     // Getters
 
@@ -50,18 +40,6 @@ public class StickerBookPersonDAO implements SearchResultsModel {
 
     public String getPicture() {
         return picture;
-    }
-
-    public String getAvatar() {
-        return avatar;
-    }
-
-    public boolean getIsStarPerson() {
-        return isStarPerson;
-    }
-
-    public boolean getIsConnected() {
-        return isConnected;
     }
 }
 

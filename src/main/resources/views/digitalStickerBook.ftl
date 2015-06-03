@@ -71,89 +71,16 @@
                     </div>
                 </div>
             </div>
+            <h4 class="centered">You currently have <strong>${(stickerCount + " person(s)")!"no one ... [or there is a problem ;) ]"}</strong> in your sticker book, but you need more!!</h4>
             <div class="row">
-            <h3>The Lab  <a href=""><i class="fa fa-info-circle fa-lg"></i></a></h3>
-                <div class="col-md-3 col-sm-4 sticker">
-                    <img class="stickerImg" src="/assets/images/default_profile.jpg">
-                    <h6>Elliot Massey</h6>
-                </div>
-                <div class="col-md-3 col-sm-4 sticker">
-                    <img class="stickerImg" src="/assets/images/default_profile.jpg">
-                    <h6>Jez Sherwin</h6>
-                </div>
-                <div class="col-md-3 col-sm-4 sticker">
-                    <img class="stickerImg" src="/assets/images/default_profile.jpg">
-                    <h6>Fahren Wallace</h6>
-                </div>
-                <div class="col-md-3 col-sm-4 sticker">
-                    <img class="stickerImg" src="/assets/images/default_profile.jpg">
-                    <h6><i class="fa fa-star"></i> Stephen Devereux <i class="fa fa-star"></i></h6>
-                </div>
-                <div class="col-md-3 col-sm-4 sticker">
-                    <img class="stickerImg" src="/assets/images/default_profile.jpg">
-                    <h6>Benny Hill</h6>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-3 col-sm-4 sticker">
-                    <img class="stickerImg" src="/assets/images/default_profile.jpg">
-                    <h6>Derek Smith</h6>
-                </div>
-                <div class="col-md-3 col-sm-4 sticker">
-                    <img class="stickerImg" src="/assets/images/default_profile.jpg">
-                    <h6>Andrew Harland</h6>
-                </div>
-                <div class="col-md-3 col-sm-4 sticker">
-                    <img class="stickerImg" src="/assets/images/default_profile.jpg">
-                    <h6>Derek Walsh</h6>
-                </div>
-
-            </div>
-            <div class="row">
-            <h3>Ecommerce  <a href=""><i class="fa fa-info-circle fa-lg"></i></a></h3>
-                <div class="col-md-3 col-sm-4 sticker">
-                    <img class="stickerImg" src="/assets/images/default_profile.jpg">
-                    <h6>Orlando Depp</h6>
-                </div>
-                <div class="col-md-3 col-sm-4 sticker">
-                    <img class="stickerImg" src="/assets/images/default_profile.jpg">
-                    <h6>Lucy Beinz</h6>
-                </div>
-                <div class="col-md-3 col-sm-4 sticker">
-                    <img class="stickerImg" src="/assets/images/default_profile.jpg">
-                    <h6>Vivian Martin</h6>
-                </div>
-                <div class="col-md-3 col-sm-4 sticker">
-                    <img class="stickerImg" src="/assets/images/default_profile.jpg">
-                    <h6><i class="fa fa-star"></i> Delvin Troy <i class="fa fa-star"></i></h6>
-                </div>
-                <div class="col-md-3 col-sm-4 sticker">
-                    <img class="stickerImg" src="/assets/images/default_profile.jpg">
-                    <h6>Jordan Peshmi</h6>
-                </div>
-            </div>
-            <div class="row">
-            <h3>Devo2  <a href=""><i class="fa fa-info-circle fa-lg"></i></a></h3>
-                <div class="col-md-3 col-sm-4 sticker">
-                    <img class="stickerImg" src="/assets/images/default_profile.jpg">
-                    <h6>Sara Johns</h6>
-                </div>
-                <div class="col-md-3 col-sm-4 sticker">
-                    <img class="stickerImg" src="/assets/images/default_profile.jpg">
-                    <h6>Boris Matthew</h6>
-                </div>
-                <div class="col-md-3 col-sm-4 sticker">
-                    <img class="stickerImg" src="/assets/images/default_profile.jpg">
-                    <h6>Kevin Andrews</h6>
-                </div>
-                <div class="col-md-3 col-sm-4 sticker">
-                    <img class="stickerImg" src="/assets/images/default_profile.jpg">
-                    <h6>Patrick Macqhenciz</h6>
-                </div>
-                <div class="col-md-3 col-sm-4 sticker">
-                    <img class="stickerImg" src="/assets/images/default_profile.jpg">
-                    <h6>Alice Khans</h6>
-                </div>
+            <#list stickerBookPersonList as stickerBookPersonList>
+                <a href="/person/${(stickerBookPersonList.personId)!""}">
+                    <div class="col-md-3 col-sm-4 sticker">
+                        <img class="stickerImg" src="${(stickerBookPersonList.picture)!"/assets/images/default_profile.jpg"}">
+                        <h6>${(stickerBookPersonList.firstName)!"-"} ${(stickerBookPersonList.lastName)!"-"}</h6>
+                    </div>
+                </a>
+            </#list>
             </div>
         </div>
     </body>

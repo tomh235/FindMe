@@ -733,10 +733,10 @@ public class PersonsQuery {
         }//end try
     }
 
-    public StickerBookPersonDAO getAllSBPersonsFor(int personID) {
+    public List<StickerBookPersonDAO> getAllSBPersonsFor(int personID) {
         Connection conn = null;
         PreparedStatement pstmt = null;
-        StickerBookPersonDAO person = null;
+        List<StickerBookPersonDAO> personList = new ArrayList<StickerBookPersonDAO>();
 
         try{
             //STEP 2: Register JDBC driver
@@ -747,7 +747,7 @@ public class PersonsQuery {
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
             //STEP 4: Execute a query and add results to list
-            String sql = "SELECT p.idPerson, p.firstName, p.lastName, p.avatar, p.photo FROM persons p " +
+            String sql = "SELECT p.idPerson, p.firstName, p.lastName, p.photo FROM persons p " +
             "LEFT JOIN personStickerBookConnection psbc ON p.idPerson = psbc.idConnectedPerson " +
             "WHERE psbc.idPerson = ?";
 
@@ -756,8 +756,15 @@ public class PersonsQuery {
 
             ResultSet rs = pstmt.executeQuery();
 
-            while(rs.next()) {
-
+            while(rs.next())
+            {
+                StickerBookPersonDAO person =
+                        new StickerBookPersonDAO(
+                                rs.getInt("p.idPerson"),
+                                rs.getString("p.firstName"),
+                                rs.getString("p.lastName"),
+                                rs.getString("p.photo"));
+                personList.add(person);
             }
 
             //STEP 5: Clean-up environment
@@ -784,7 +791,7 @@ public class PersonsQuery {
                 se.printStackTrace();
             }//end finally try
         }//end try
-        return person;
+        return personList;
     }
 
 
