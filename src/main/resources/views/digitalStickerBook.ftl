@@ -74,12 +74,14 @@
             <h4 class="centered">You currently have <strong>${(stickerCount + " person(s)")!"no one ... [or there is a problem ;) ]"}</strong> in your sticker book, but you need more!!</h4>
             <div class="row">
             <#list stickerBookPersonList as stickerBookPersonList>
-                <a href="/person/${(stickerBookPersonList.personId)!""}">
+
                     <div class="col-md-3 col-sm-4 sticker">
-                        <img class="stickerImg" src="${(stickerBookPersonList.picture)!"/assets/images/default_profile.jpg"}">
+                        <a href="/person/${(stickerBookPersonList.personId)!""}" class="thumbnail">
+                            <img class="stickerImg" src="${(stickerBookPersonList.picture)!"/assets/images/default_profile.jpg"}">
+                        </a>
                         <h6>${(stickerBookPersonList.firstName)!"-"} ${(stickerBookPersonList.lastName)!"-"}</h6>
                     </div>
-                </a>
+
             </#list>
             </div>
         </div>

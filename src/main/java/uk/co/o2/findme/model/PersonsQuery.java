@@ -156,6 +156,106 @@ public class PersonsQuery {
         return personList;
     }
 
+    public void addPersonToStickerBookFor(int currentUser, int targetUser) {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        List<StickerBookDataObject> personList = new ArrayList<StickerBookDataObject>();
+
+        try{
+            //STEP 2: Register JDBC driver
+            Class.forName("com.mysql.jdbc.Driver");
+
+            //STEP 3: Open a connection
+            System.out.println("Connecting to database...");
+            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+
+            //STEP 4: Execute a query and add results to list
+            String sql = "INSERT INTO personStickerBookConnection VALUES(?,?)";
+
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setInt(1, currentUser);
+            pstmt.setInt(2, targetUser);
+
+            pstmt.executeUpdate();
+
+            //STEP 5: Clean-up environment
+            pstmt.close();
+            conn.close();
+        }catch(SQLException se){
+            //Handle errors for JDBC
+            se.printStackTrace();
+        }catch(Exception e){
+            //Handle errors for Class.forName
+            e.printStackTrace();
+        }finally{
+            //finally block used to close resources
+            try{
+                if(pstmt != null)
+                    pstmt.close();
+            }catch(SQLException se2){
+            }// nothing we can do
+            try{
+                if(conn != null)
+                    conn.close();
+            }catch(SQLException se){
+                se.printStackTrace();
+            }//end finally try
+        }//end try
+    }
+
+    public int checkIfConnectionIsAlreadyPresent(int currentUser, int targetUser) {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        int numberOfRowsReturned = 0;
+
+        try{
+            //STEP 2: Register JDBC driver
+            Class.forName("com.mysql.jdbc.Driver");
+
+            //STEP 3: Open a connection
+            System.out.println("Connecting to database...");
+            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+
+            //STEP 4: Execute a query and add results to list
+            String sql = "SELECT * FROM personStickerBookConnection WHERE idPerson=? AND idConnectedPerson=?";
+
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setInt(1, currentUser);
+            pstmt.setInt(2, targetUser);
+
+            ResultSet rs = pstmt.executeQuery();
+
+            while(rs.next())
+            {
+                numberOfRowsReturned++;
+            }
+
+            //STEP 5: Clean-up environment
+            pstmt.close();
+            conn.close();
+        }catch(SQLException se){
+            //Handle errors for JDBC
+            se.printStackTrace();
+        }catch(Exception e){
+            //Handle errors for Class.forName
+            e.printStackTrace();
+        }finally{
+            //finally block used to close resources
+            try{
+                if(pstmt != null)
+                    pstmt.close();
+            }catch(SQLException se2){
+            }// nothing we can do
+            try{
+                if(conn != null)
+                    conn.close();
+            }catch(SQLException se){
+                se.printStackTrace();
+            }//end finally try
+        }//end try
+        return numberOfRowsReturned;
+    }
+
     public List<StickerBookDataObject> getAllPersonsForSBLeaderBoard() {
         Connection conn = null;
         PreparedStatement pstmt = null;

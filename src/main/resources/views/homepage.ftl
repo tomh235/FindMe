@@ -61,7 +61,7 @@
                         <span class="input-group-btn find-me">
                             <p>Find Me</p>
                         </span>
-                        <input tabindex="1" id="searchInput" type="text" name="keywords" class="form-control icon-search" placeholder="Search by person or team">
+                        <input tabindex="1" id="searchInput" type="text" name="keywords" class="form-control icon-search" placeholder="Search by person">
                         <span class="input-group-btn">
                             <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
                         </span>

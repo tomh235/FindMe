@@ -54,6 +54,20 @@ public class PersonModel {
         return personGuess;
     }
 
+    public void addPersonToStickerBook(int currentUser, int targetUser) {
+        personsQuery.addPersonToStickerBookFor(currentUser, targetUser);
+        personsQuery.updateStickerBookData(currentUser);
+    }
+
+    public boolean checkIfConnectionIsAlreadyPresent(int currentUser, int targetUser) {
+        int value = personsQuery.checkIfConnectionIsAlreadyPresent(currentUser, targetUser);
+        if(value != 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public List<StickerBookPersonDAO> getPeopleInStickerBookFor(int personID) {
         List<StickerBookPersonDAO> list = personsQuery.getAllSBPersonsFor(personID);
         return list;
