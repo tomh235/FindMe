@@ -8,14 +8,14 @@ import uk.co.o2.findme.model.SearchResultsModel;
 public class GameDataObject implements SearchResultsModel {
 
     // Fields
-    private int personId;
+    private String personId;
     private String firstName;
     private String lastName;
     private String jobTitle;
     private int gameScore;
 
 
-    public GameDataObject(int personId,
+    public GameDataObject(String personId,
                           String firstName,
                           String lastName,
                           String jobTitle,
@@ -31,7 +31,7 @@ public class GameDataObject implements SearchResultsModel {
 
     // Getters
 
-    public int getPersonId() {
+    public String getPersonId() {
         return personId;
     }
 

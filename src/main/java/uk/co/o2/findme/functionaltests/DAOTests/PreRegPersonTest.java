@@ -4,9 +4,14 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import uk.co.o2.findme.dao.PreRegPerson;
 
+import static java.util.UUID.randomUUID;
+
 public class PreRegPersonTest {
 
+    private final String newPersonId = randomUUID().toString();
+
     PreRegPerson personObject = new PreRegPerson(
+            newPersonId,
             "Boris",
             "Yeltsin",
             "boris.yeltsin@o2.com",
@@ -24,6 +29,7 @@ public class PreRegPersonTest {
 
     @Test
     public void testPersonDAOObject() {
+        Assert.assertEquals(newPersonId, personObject.getPersonId());
         Assert.assertEquals("Boris", personObject.getFirstName());
         Assert.assertEquals("Yeltsin", personObject.getLastName());
         Assert.assertEquals("boris.yeltsin@o2.com", personObject.getEmail());

@@ -5,13 +5,16 @@ import org.testng.annotations.Test;
 import uk.co.o2.findme.dao.PersonLoginDAO;
 import uk.co.o2.findme.dao.StickerBookPersonDAO;
 
+import static java.util.UUID.randomUUID;
+
 public class StickerBookPersonDAOTest {
 
-    StickerBookPersonDAO personLoginDAO = new StickerBookPersonDAO(0, "Boris", "Yeltsin", "http://google.co.uk/image");
+    private final String newPersonId = randomUUID().toString();
+    StickerBookPersonDAO personLoginDAO = new StickerBookPersonDAO(newPersonId, "Boris", "Yeltsin", "http://google.co.uk/image");
 
     @Test
     public void testStickerBookPersonDAO() {
-        Assert.assertEquals(0, personLoginDAO.getPersonId());
+        Assert.assertEquals(newPersonId, personLoginDAO.getPersonId());
         Assert.assertEquals("Boris", personLoginDAO.getFirstName());
         Assert.assertEquals("Yeltsin", personLoginDAO.getLastName());
         Assert.assertEquals("http://google.co.uk/image", personLoginDAO.getPicture());

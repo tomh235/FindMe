@@ -7,9 +7,8 @@
         <link rel="stylesheet" media="screen" href="/assets/css/main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <script src="/assets/javascripts/jquery-1.11.3.min.js"></script>
+        <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
         <!-- Fixed navbar -->

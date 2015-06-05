@@ -15,6 +15,7 @@ import java.net.URISyntaxException;
 import java.util.HashMap;
 import java.util.Map;
 
+import static java.util.UUID.randomUUID;
 import static javax.ws.rs.core.Response.ok;
 import static javax.ws.rs.core.Response.serverError;
 
@@ -31,13 +32,14 @@ public class OverviewController {
             if (loginCookie == null || loginCookie.getValue().equals("null")) {
                 return Response.ok().entity(new Viewable("/login.ftl")).build();
             } else {
-                if (!personModel.isValidPersonID(Integer.parseInt(loginCookie.getValue()))) {
+                if (!personModel.isValidPersonID(loginCookie.getValue())) {
                     return Response.ok().entity(new Viewable("/login.ftl")).build();
                 } else {
-                    final PersonDAO currentUser = personModel.getPersonById(Integer.parseInt(loginCookie.getValue()));
+                    final PersonDAO currentUser = personModel.getPersonById(loginCookie.getValue());
                     final String populationCount = personModel.getNumberOfPeopleInDatabase();
-                    final String numberOfStickers = personModel.getStickerBookNumber(Integer.parseInt(loginCookie.getValue()));
-                    final boolean hasPlayed = personModel.getIfCompetedFor(Integer.parseInt(loginCookie.getValue()));
+                    final String numberOfStickers = personModel.getStickerBookNumber(loginCookie.getValue());
+                    final boolean hasPlayed = personModel.getIfCompetedFor(loginCookie.getValue());
+                    System.out.println(randomUUID().toString());
                     Map<String, Object> model = new HashMap();
                     model.put("currentUser", currentUser);
                     model.put("popCount", populationCount);

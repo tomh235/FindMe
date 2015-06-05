@@ -7,9 +7,8 @@
         <link rel="stylesheet" media="screen" href="/assets/css/main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <script src="/assets/javascripts/jquery-1.11.3.min.js"></script>
+        <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
 <!-- Fixed navbar -->
@@ -27,8 +26,15 @@
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li><a href="/">Home</a></li>
-                <li><a href="/stickerBook">Sticker book <span class="badge">1060</span></a></li>
-                <li><a href="/competition">Daily Competition <span class="badge"><i class="fa fa-exclamation"></i></span></a></li>
+                <li><a href="/stickerBook">Sticker book <span class="badge">${(stickerCount)!"-"}</span></a></li>
+                <li><a href="/competition">Daily Competition
+                        <#if hasPlayed == true>
+
+                         <#elseif hasPlayed == false>
+                             <span class="badge"><i class="fa fa-exclamation"></i></span>
+                         </#if>
+                    </a>
+                </li>
                 <li><a href="/leaderboards">Leaderboards</a></li>
               </ul>
 
@@ -55,7 +61,7 @@
 
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 entry">
-                    <img class="single-person-pic" width="200px" height="200px" src="${person.picture}"></img>
+                    <img class="single-person-pic" width="200px" height="200px" src="${(person.picture)!"/assets/images/default_profile.jpg"}"></img>
                     <div class="quickContact">
                         <h5 class="personName">${person.firstName} ${person.lastName}</h5>
                         <p class="lastUpdated">Last updated 20/04/2015</p>
@@ -64,7 +70,6 @@
                         <h5 class="personLocation">${person.location}</h5>
 
                         <h5 class="personEmail"><i class="fa fa-envelope-o"></i> - ${person.email}</h5>
-                        <br>
                         <h5 class="personPhone"><i class="fa fa-phone"></i> - 0771234567</h5>
                     </div>
                     <h5>A quick bit about me:</h5>

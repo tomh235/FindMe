@@ -52,7 +52,7 @@ public class PersonsQuery {
             {
                 PersonDAO person =
                         new PersonDAO(
-                                rs.getInt("p.idPerson"),
+                                rs.getString("p.idPerson"),
                                 rs.getString("p.firstName"),
                                 rs.getString("p.lastName"),
                                 rs.getString("p.photo"),
@@ -121,7 +121,7 @@ public class PersonsQuery {
             {
                 GameDataObject person =
                         new GameDataObject(
-                                rs.getInt("gd.idPerson"),
+                                rs.getString("gd.idPerson"),
                                 rs.getString("p.firstName"),
                                 rs.getString("p.lastName"),
                                 rs.getString("p.jobTitle"),
@@ -156,7 +156,7 @@ public class PersonsQuery {
         return personList;
     }
 
-    public void addPersonToStickerBookFor(int currentUser, int targetUser) {
+    public void addPersonToStickerBookFor(String currentUser, String targetUser) {
         Connection conn = null;
         PreparedStatement pstmt = null;
         List<StickerBookDataObject> personList = new ArrayList<StickerBookDataObject>();
@@ -173,8 +173,8 @@ public class PersonsQuery {
             String sql = "INSERT INTO personStickerBookConnection VALUES(?,?)";
 
             pstmt = conn.prepareStatement(sql);
-            pstmt.setInt(1, currentUser);
-            pstmt.setInt(2, targetUser);
+            pstmt.setString(1, currentUser);
+            pstmt.setString(2, targetUser);
 
             pstmt.executeUpdate();
 
@@ -203,7 +203,7 @@ public class PersonsQuery {
         }//end try
     }
 
-    public int checkIfConnectionIsAlreadyPresent(int currentUser, int targetUser) {
+    public int checkIfConnectionIsAlreadyPresent(String currentUser, String targetUser) {
         Connection conn = null;
         PreparedStatement pstmt = null;
         int numberOfRowsReturned = 0;
@@ -220,8 +220,8 @@ public class PersonsQuery {
             String sql = "SELECT * FROM personStickerBookConnection WHERE idPerson=? AND idConnectedPerson=?";
 
             pstmt = conn.prepareStatement(sql);
-            pstmt.setInt(1, currentUser);
-            pstmt.setInt(2, targetUser);
+            pstmt.setString(1, currentUser);
+            pstmt.setString(2, targetUser);
 
             ResultSet rs = pstmt.executeQuery();
 
@@ -282,7 +282,7 @@ public class PersonsQuery {
             {
                 StickerBookDataObject person =
                         new StickerBookDataObject(
-                                rs.getInt("gd.idPerson"),
+                                rs.getString("gd.idPerson"),
                                 rs.getString("p.firstName"),
                                 rs.getString("p.lastName"),
                                 rs.getString("p.jobTitle"),
@@ -317,7 +317,7 @@ public class PersonsQuery {
         return personList;
     }
 
-    public PersonDAO searchByPersonIdOf(int personID) {
+    public PersonDAO searchByPersonIdOf(String personID) {
         Connection conn = null;
         PreparedStatement pstmt = null;
         PersonDAO person = null;
@@ -340,15 +340,15 @@ public class PersonsQuery {
             "WHERE p.idPerson = ?";
 
             pstmt = conn.prepareStatement(sql);
-            pstmt.setInt(1, personID);
+            pstmt.setString(1, personID);
 
             ResultSet rs = pstmt.executeQuery();
 
             while(rs.next())
             {
                 person = new PersonDAO(
-                                rs.getInt("p.idPerson"),
-                        rs.getString("p.firstName"),
+                                rs.getString("p.idPerson"),
+                                rs.getString("p.firstName"),
                                 rs.getString("p.lastName"),
                                 rs.getString("p.photo"),
                                 rs.getString("p.emailAddress"),
@@ -447,7 +447,7 @@ public class PersonsQuery {
         return details;
     }
 
-    public boolean isValidPersonId(int personID) {
+    public boolean isValidPersonId(String personID) {
         Connection conn = null;
         PreparedStatement pstmt = null;
         boolean result = false;
@@ -464,7 +464,7 @@ public class PersonsQuery {
             String sql = "SELECT idPerson FROM persons WHERE idPerson = ?";
 
             pstmt = conn.prepareStatement(sql);
-            pstmt.setInt(1, personID);
+            pstmt.setString(1, personID);
 
             ResultSet rs = pstmt.executeQuery();
 
@@ -503,7 +503,7 @@ public class PersonsQuery {
         return result;
     }
 
-    public String getNumberOfStickersFor(int personID) {
+    public String getNumberOfStickersFor(String personID) {
         Connection conn = null;
         PreparedStatement pstmt = null;
         String numberOfStickers = null;
@@ -521,7 +521,7 @@ public class PersonsQuery {
             //String sql2 = "SELECT lastGameEntry FROM leaderboards WHERE idPerson = ?";
 
             pstmt = conn.prepareStatement(sql);
-            pstmt.setInt(1, personID);
+            pstmt.setString(1, personID);
 
             ResultSet rs = pstmt.executeQuery();
 
@@ -557,7 +557,7 @@ public class PersonsQuery {
         return numberOfStickers;
     }
 
-    public boolean getIfUserHasPlayedForToday(int personID) {
+    public boolean getIfUserHasPlayedForToday(String personID) {
         Connection conn = null;
         PreparedStatement pstmt = null;
         boolean hasPlayed = false;
@@ -574,7 +574,7 @@ public class PersonsQuery {
             String sql = "SELECT idPerson FROM competitionData WHERE idPerson = ?";
 
             pstmt = conn.prepareStatement(sql);
-            pstmt.setInt(1, personID);
+            pstmt.setString(1, personID);
 
             ResultSet rs = pstmt.executeQuery();
 
@@ -610,7 +610,7 @@ public class PersonsQuery {
         return hasPlayed;
     }
 
-    public String submitEntry(int personID, String entry) {
+    public String submitEntry(String personID, String entry) {
         Connection conn = null;
         PreparedStatement pstmt = null;
 
@@ -626,7 +626,7 @@ public class PersonsQuery {
             String sql = "INSERT INTO competitionData VALUES (?,?)";
 
             pstmt = conn.prepareStatement(sql);
-            pstmt.setInt(1, personID);
+            pstmt.setString(1, personID);
             pstmt.setString(2, entry);
 
             pstmt.executeUpdate();
@@ -661,7 +661,7 @@ public class PersonsQuery {
         }//end try
     }
 
-    public boolean updateGameData(int personID, String currentDate) {
+    public boolean updateGameData(String personID, String currentDate) {
         Connection conn = null;
         PreparedStatement pstmt = null;
 
@@ -681,7 +681,7 @@ public class PersonsQuery {
 
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, currentDate);
-            pstmt.setInt(2, personID);
+            pstmt.setString(2, personID);
 
 
             pstmt.executeUpdate();
@@ -716,7 +716,7 @@ public class PersonsQuery {
     }
 
 
-    public boolean updateStickerBookData(int personID) {
+    public boolean updateStickerBookData(String personID) {
         Connection conn = null;
         PreparedStatement pstmt = null;
 
@@ -735,7 +735,7 @@ public class PersonsQuery {
 
 
             pstmt = conn.prepareStatement(sql);
-            pstmt.setInt(1, personID);
+            pstmt.setString(1, personID);
 
 
             pstmt.executeUpdate();
@@ -770,7 +770,7 @@ public class PersonsQuery {
     }
 
 
-    public boolean updateUser(String firstName, String lastName, String email, String phoneNumber, String picture, String jobTitle, String teamName, String project, String location, String details, String status, int personId) {
+    public boolean updateUser(String firstName, String lastName, String email, String phoneNumber, String picture, String jobTitle, String teamName, String project, String location, String details, String status, String personId) {
         Connection conn = null;
         PreparedStatement pstmt = null;
 
@@ -800,7 +800,7 @@ public class PersonsQuery {
             pstmt.setString(9, location);
             pstmt.setString(10, details);
             pstmt.setString(11, "Active");
-            pstmt.setInt(12, personId);
+            pstmt.setString(12, personId);
 
             pstmt.executeUpdate();
 
@@ -833,7 +833,7 @@ public class PersonsQuery {
         }//end try
     }
 
-    public List<StickerBookPersonDAO> getAllSBPersonsFor(int personID) {
+    public List<StickerBookPersonDAO> getAllSBPersonsFor(String personID) {
         Connection conn = null;
         PreparedStatement pstmt = null;
         List<StickerBookPersonDAO> personList = new ArrayList<StickerBookPersonDAO>();
@@ -852,7 +852,7 @@ public class PersonsQuery {
             "WHERE psbc.idPerson = ?";
 
             pstmt = conn.prepareStatement(sql);
-            pstmt.setInt(1, personID);
+            pstmt.setString(1, personID);
 
             ResultSet rs = pstmt.executeQuery();
 
@@ -860,7 +860,7 @@ public class PersonsQuery {
             {
                 StickerBookPersonDAO person =
                         new StickerBookPersonDAO(
-                                rs.getInt("p.idPerson"),
+                                rs.getString("p.idPerson"),
                                 rs.getString("p.firstName"),
                                 rs.getString("p.lastName"),
                                 rs.getString("p.photo"));

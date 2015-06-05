@@ -27,15 +27,15 @@ public class PersonController {
             if (loginCookie == null || loginCookie.getValue().equals("null")) {
                 return Response.ok().entity(new Viewable("/login.ftl")).build();
             } else {
-                if (!personModel.isValidPersonID(Integer.parseInt(loginCookie.getValue()))) {
+                if (!personModel.isValidPersonID(loginCookie.getValue())) {
                     return Response.ok().entity(new Viewable("/login.ftl")).build();
                 } else {
                     Map<String, Object> model = new HashMap();
-                    final int personID = Integer.parseInt(id);
-                    final PersonDAO currentUser = personModel.getPersonById(Integer.parseInt(loginCookie.getValue()));
+                    final String personID = id;
+                    final PersonDAO currentUser = personModel.getPersonById(loginCookie.getValue());
                     final PersonDAO person = personModel.getPersonById(personID);
-                    final String numberOfStickers = personModel.getStickerBookNumber(Integer.parseInt(loginCookie.getValue()));
-                    final boolean hasPlayed = personModel.getIfCompetedFor(Integer.parseInt(loginCookie.getValue()));
+                    final String numberOfStickers = personModel.getStickerBookNumber(loginCookie.getValue());
+                    final boolean hasPlayed = personModel.getIfCompetedFor(loginCookie.getValue());
                     model.put("currentUser", currentUser);
                     model.put("person", person);
                     model.put("stickerCount", numberOfStickers);

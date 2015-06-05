@@ -50,7 +50,7 @@ public class SignUpController {
         System.out.print("## " + photo + "\n");
         String newPersonId = randomUUID().toString();
         SaltAndHashDAO saltAndHashDAO = saltAndHashModel.createUserHash(password);
-        PreRegPerson preRegPerson = new PreRegPerson(firstName, lastName, email, photo, phoneNumber, saltAndHashDAO.getSalt(), saltAndHashDAO.getPasswordHash(), jobTitle, location, currentProject, details, "Active", team);
+        PreRegPerson preRegPerson = new PreRegPerson(newPersonId, firstName, lastName, email, photo, phoneNumber, saltAndHashDAO.getSalt(), saltAndHashDAO.getPasswordHash(), jobTitle, location, currentProject, details, "Active", team);
         System.out.print(preRegPerson.getJobTitle());
         Map<String, Object> model = new HashMap();
         model.put("personInformation", preRegPerson);

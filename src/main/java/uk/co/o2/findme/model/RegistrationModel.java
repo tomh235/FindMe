@@ -17,9 +17,8 @@ public class RegistrationModel {
     public boolean registerAccount(PreRegPerson preRegPerson) {
         if(!isEmailMatching(preRegPerson.getEmail())) {
             registrationQuery.registerUser(preRegPerson);
-            int personID = registrationQuery.getPersonID(preRegPerson.getEmail());
-            System.out.println(personID);
-            registrationQuery.setupGameData(personID);
+            System.out.println(preRegPerson.getPersonId());
+            registrationQuery.setupGameData(preRegPerson.getPersonId());
             System.out.println("true");
             return true;
         } else {

@@ -8,14 +8,14 @@ import uk.co.o2.findme.model.SearchResultsModel;
 public class StickerBookDataObject implements SearchResultsModel {
 
     // Fields
-    private int personId;
+    private String personId;
     private String firstName;
     private String lastName;
     private String jobTitle;
     private int stickerbookScore;
 
 
-    public StickerBookDataObject(int personId,
+    public StickerBookDataObject(String personId,
                           String firstName,
                           String lastName,
                           String jobTitle,
@@ -31,7 +31,7 @@ public class StickerBookDataObject implements SearchResultsModel {
 
     // Getters
 
-    public int getPersonId() {
+    public String getPersonId() {
         return personId;
     }
 

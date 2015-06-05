@@ -8,12 +8,12 @@ import uk.co.o2.findme.model.SearchResultsModel;
 public class StickerBookPersonDAO implements SearchResultsModel {
 
     // Fields
-    private int personId;
+    private String personId;
     private String firstName;
     private String lastName;
     private String picture;
 
-    public StickerBookPersonDAO(int personId,
+    public StickerBookPersonDAO(String personId,
                                 String firstName,
                                 String lastName,
                                 String picture) {
@@ -26,7 +26,7 @@ public class StickerBookPersonDAO implements SearchResultsModel {
 
     // Getters
 
-    public int getPersonId() {
+    public String getPersonId() {
         return personId;
     }
 

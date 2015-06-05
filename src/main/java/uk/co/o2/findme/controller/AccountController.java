@@ -26,13 +26,13 @@ public class AccountController {
             if (loginCookie == null || loginCookie.getValue().equals("null")) {
                 return Response.ok().entity(new Viewable("/login.ftl")).build();
             } else {
-                if (!personModel.isValidPersonID(Integer.parseInt(loginCookie.getValue()))) {
+                if (!personModel.isValidPersonID(loginCookie.getValue())) {
                     return Response.ok().entity(new Viewable("/login.ftl")).build();
                 } else {
-                    final int personID = Integer.parseInt(loginCookie.getValue());
+                    final String personID = loginCookie.getValue();
                     final PersonDAO person = personModel.getPersonById(personID);
-                    final String numberOfStickers = personModel.getStickerBookNumber(Integer.parseInt(loginCookie.getValue()));
-                    final boolean hasPlayed = personModel.getIfCompetedFor(Integer.parseInt(loginCookie.getValue()));
+                    final String numberOfStickers = personModel.getStickerBookNumber(loginCookie.getValue());
+                    final boolean hasPlayed = personModel.getIfCompetedFor(loginCookie.getValue());
                     final String QRCodeLink = "localhost:9000/person/" + loginCookie.getValue();
                     Map<String, Object> model = new HashMap();
                     model.put("person", person);
@@ -61,7 +61,7 @@ public class AccountController {
                             @FormParam("location") String location,
                             @FormParam("details") String details) throws Exception {
 
-        final int personID = Integer.parseInt(loginCookie.getValue());
+        final String personID = loginCookie.getValue();
 
         personModel.updatePersonDetails(personID, firstName, lastName, email, phoneNumber, picture, jobTitle, team, project, location, details, "Active");
 

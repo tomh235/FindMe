@@ -8,7 +8,7 @@ import uk.co.o2.findme.model.SearchResultsModel;
 public class PersonDAO implements SearchResultsModel {
 
     // Fields
-    private int personId;
+    private String personId;
     private String firstName;
     private String lastName;
     private String picture;
@@ -22,7 +22,7 @@ public class PersonDAO implements SearchResultsModel {
     private String teamName;
     private String statusInTeam;
 
-    public PersonDAO(int personId,
+    public PersonDAO(String personId,
                      String firstName,
                      String lastName,
                      String picture,
@@ -54,7 +54,7 @@ public class PersonDAO implements SearchResultsModel {
 
     // Getters
 
-    public int getPersonId() {
+    public String getPersonId() {
         return personId;
     }
 

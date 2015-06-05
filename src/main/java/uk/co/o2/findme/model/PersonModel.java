@@ -27,16 +27,16 @@ public class PersonModel {
 
     }
 
-    public PersonDAO getPersonById(int personID) {
+    public PersonDAO getPersonById(String personID) {
         PersonDAO person = personsQuery.searchByPersonIdOf(personID);
         return person;
     }
 
-    public String getStickerBookNumber(int personID) {
+    public String getStickerBookNumber(String personID) {
         return personsQuery.getNumberOfStickersFor(personID);
     }
 
-    public boolean getIfCompetedFor(int personID) {
+    public boolean getIfCompetedFor(String personID) {
         boolean hasPlayed = personsQuery.getIfUserHasPlayedForToday(personID);
 
         return hasPlayed;
@@ -47,12 +47,12 @@ public class PersonModel {
         return personGuess;
     }
 
-    public void addPersonToStickerBook(int currentUser, int targetUser) {
+    public void addPersonToStickerBook(String currentUser, String targetUser) {
         personsQuery.addPersonToStickerBookFor(currentUser, targetUser);
         personsQuery.updateStickerBookData(currentUser);
     }
 
-    public boolean checkIfConnectionIsAlreadyPresent(int currentUser, int targetUser) {
+    public boolean checkIfConnectionIsAlreadyPresent(String currentUser, String targetUser) {
         int value = personsQuery.checkIfConnectionIsAlreadyPresent(currentUser, targetUser);
         if(value != 0) {
             return true;
@@ -61,7 +61,7 @@ public class PersonModel {
         }
     }
 
-    public List<StickerBookPersonDAO> getPeopleInStickerBookFor(int personID) {
+    public List<StickerBookPersonDAO> getPeopleInStickerBookFor(String personID) {
         List<StickerBookPersonDAO> list = personsQuery.getAllSBPersonsFor(personID);
         return list;
     }
@@ -76,7 +76,7 @@ public class PersonModel {
         return stickerBookLBList;
     }
 
-    public String submitEntry(int personID, String entry) {
+    public String submitEntry(String personID, String entry) {
         Date dt = new Date();
 
         SimpleDateFormat sdf =
@@ -91,7 +91,7 @@ public class PersonModel {
         return personGuess;
     }
 
-    public boolean isValidPersonID(int personID) {
+    public boolean isValidPersonID(String personID) {
         boolean response = personsQuery.isValidPersonId(personID);
         return response;
     }
@@ -106,7 +106,7 @@ public class PersonModel {
         return number;
     }
 
-    public void updatePersonDetails(int personId,
+    public void updatePersonDetails(String personId,
                                        String firstName,
                                        String lastName,
                                        String email,

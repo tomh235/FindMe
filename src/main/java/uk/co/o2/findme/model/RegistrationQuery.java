@@ -36,23 +36,24 @@ public class RegistrationQuery {
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
             //STEP 4: Execute a query and add results to list
-            String sql = "INSERT INTO persons (firstName, lastName, emailAddress, photo, phoneNumber, personSalt, personHashPassword, jobTitle, currentProject, currentTeam, location, details, status) " +
-                    "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            String sql = "INSERT INTO persons (idPerson, firstName, lastName, emailAddress, photo, phoneNumber, personSalt, personHashPassword, jobTitle, currentProject, currentTeam, location, details, status) " +
+                    "VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
             pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1, preRegPerson.getFirstName());
-            pstmt.setString(2, preRegPerson.getLastName());
-            pstmt.setString(3, preRegPerson.getEmail());
-            pstmt.setString(4, preRegPerson.getPhoto());
-            pstmt.setString(5, preRegPerson.getPhoneNumber());
-            pstmt.setString(6, preRegPerson.getSalt());
-            pstmt.setString(7, preRegPerson.getPassword());
-            pstmt.setString(8, preRegPerson.getJobTitle());
-            pstmt.setString(9, preRegPerson.getCurrentProject());
-            pstmt.setString(10, preRegPerson.getTeamName());
-            pstmt.setString(11, preRegPerson.getLocation());
-            pstmt.setString(12, preRegPerson.getDetails());
-            pstmt.setString(13, preRegPerson.getStatus());
+            pstmt.setString(1, preRegPerson.getPersonId());
+            pstmt.setString(2, preRegPerson.getFirstName());
+            pstmt.setString(3, preRegPerson.getLastName());
+            pstmt.setString(4, preRegPerson.getEmail());
+            pstmt.setString(5, preRegPerson.getPhoto());
+            pstmt.setString(6, preRegPerson.getPhoneNumber());
+            pstmt.setString(7, preRegPerson.getSalt());
+            pstmt.setString(8, preRegPerson.getPassword());
+            pstmt.setString(9, preRegPerson.getJobTitle());
+            pstmt.setString(10, preRegPerson.getCurrentProject());
+            pstmt.setString(11, preRegPerson.getTeamName());
+            pstmt.setString(12, preRegPerson.getLocation());
+            pstmt.setString(13, preRegPerson.getDetails());
+            pstmt.setString(14, preRegPerson.getStatus());
 
             pstmt.executeUpdate();
 
@@ -81,7 +82,7 @@ public class RegistrationQuery {
         }//end try
     }
 
-    public void setupGameData(int personID) {
+    public void setupGameData(String personID) {
 
         Connection conn = null;
         PreparedStatement pstmt3 = null;
@@ -100,7 +101,7 @@ public class RegistrationQuery {
                     "VALUES(?, ?)";
 
             pstmt3 = conn.prepareStatement(sql3);
-            pstmt3.setInt(1, personID);
+            pstmt3.setString(1, personID);
             pstmt3.setDate(2, getCurrentDateMinusDay());
 
             pstmt3.executeUpdate();

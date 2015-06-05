@@ -5,12 +5,12 @@ package uk.co.o2.findme.dao;
  */
 public class PersonLoginDAO {
 
-    private int personId;
+    private String personId;
     private String email;
     private String personSalt;
     private String personEncryptedPassword;
 
-    public PersonLoginDAO(int personId,
+    public PersonLoginDAO(String personId,
                      String email,
                      String personSalt,
                      String personEncryptedPassword) {
@@ -21,7 +21,7 @@ public class PersonLoginDAO {
         this.personEncryptedPassword = personEncryptedPassword;
     }
 
-    public int getPersonId() {
+    public String getPersonId() {
         return personId;
     }
 

@@ -32,7 +32,7 @@ public class LoginController {
             if (loginCookie == null || loginCookie.getValue().equals("null")) {
                 return Response.ok().entity(new Viewable("/login.ftl")).build();
             } else {
-                if (!personModel.isValidPersonID(Integer.parseInt(loginCookie.getValue()))) {
+                if (!personModel.isValidPersonID(loginCookie.getValue())) {
                     return Response.ok().entity(new Viewable("/login.ftl")).build();
                 } else {
                     return Response.seeOther(new URI("/")).build();

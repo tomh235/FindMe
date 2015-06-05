@@ -2,46 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3055c1e9-876b-4af4-a627-d8a1178946e3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/GameDataObjectTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/PersonDAOTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/PersonLoginDAOTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/ModelTests/PersonModelTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/PreRegPersonTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/SaltAndHashDAOTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/StickerBookDataObjectTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/StickerBookPersonDAOTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/testng.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functional-tests/build.gradle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functional-tests/functional-tests.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functional-tests/src/test/java/uk/co/o2/findme/functionaltests/selenium/common/Configuration.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functional-tests/src/test/java/uk/co/o2/findme/functionaltests/selenium/common/SeleniumBase.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functional-tests/src/test/java/uk/co/o2/findme/functionaltests/selenium/common/WebBrowser.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functional-tests/src/test/java/uk/co/o2/findme/functionaltests/selenium/journeys/HomePageTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functional-tests/src/test/java/uk/co/o2/findme/functionaltests/selenium/journeys/LoginPageTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functional-tests/src/test/java/uk/co/o2/findme/functionaltests/selenium/journeys/PersonDetailsTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functional-tests/src/test/java/uk/co/o2/findme/functionaltests/selenium/journeys/RegistrationTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functional-tests/src/test/java/uk/co/o2/findme/functionaltests/selenium/journeys/SearchTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functional-tests/src/test/java/uk/co/o2/findme/functionaltests/selenium/journeys/TeamDetailsTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functional-tests/src/test/java/uk/co/o2/findme/functionaltests/selenium/journeys/TeamListTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functional-tests/src/test/java/uk/co/o2/findme/functionaltests/selenium/pages/HomePage.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functional-tests/src/test/java/uk/co/o2/findme/functionaltests/selenium/pages/LoginPage.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functional-tests/src/test/java/uk/co/o2/findme/functionaltests/selenium/pages/PersonDetailsPage.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functional-tests/src/test/java/uk/co/o2/findme/functionaltests/selenium/pages/RegisterPage.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functional-tests/src/test/java/uk/co/o2/findme/functionaltests/selenium/pages/SearchPage.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functional-tests/src/test/java/uk/co/o2/findme/functionaltests/selenium/pages/SearchResultsPage.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functional-tests/src/test/java/uk/co/o2/findme/functionaltests/selenium/pages/TeamDetailsPage.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/functional-tests/src/test/java/uk/co/o2/findme/functionaltests/selenium/pages/TeamListPage.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/AccountController.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/AccountController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/FindMe.iml" afterPath="$PROJECT_DIR$/FindMe.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/ConnectionController.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/ConnectionController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/DailyCompetitionController.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/DailyCompetitionController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/GameDataObject.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/GameDataObject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/GameDataObjectTest.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/GameDataObjectTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/LeaderboardController.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/LeaderboardController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/LoginController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/OverviewController.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/OverviewController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/PersonController.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/PersonController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/PersonDAO.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/PersonDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/PersonDAOTest.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/PersonDAOTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/PersonLoginDAO.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/PersonLoginDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/PersonLoginDAOTest.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/PersonLoginDAOTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/PersonModel.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/PersonModel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/PersonsQuery.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/PersonsQuery.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/PreRegPerson.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/PreRegPerson.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/PreRegPersonTest.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/PreRegPersonTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/RegistrationModel.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/RegistrationModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/RegistrationQuery.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/RegistrationQuery.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/SignUpController.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/SignUpController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/StickerBookController.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/StickerBookController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/StickerBookDataObject.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/StickerBookDataObject.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/StickerBookDataObjectTest.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/StickerBookDataObjectTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/StickerBookPersonDAO.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/StickerBookPersonDAO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/StickerBookPersonDAOTest.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/StickerBookPersonDAOTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/views/account.ftl" afterPath="$PROJECT_DIR$/src/main/resources/views/account.ftl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/views/dailycompetition.ftl" afterPath="$PROJECT_DIR$/src/main/resources/views/dailycompetition.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/views/leaderboards.ftl" afterPath="$PROJECT_DIR$/src/main/resources/views/leaderboards.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/views/digitalStickerBook.ftl" afterPath="$PROJECT_DIR$/src/main/resources/views/digitalStickerBook.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/views/persondetails.ftl" afterPath="$PROJECT_DIR$/src/main/resources/views/persondetails.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/views/registrationForm.ftl" afterPath="$PROJECT_DIR$/src/main/resources/views/registrationForm.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/views/singleperson.ftl" afterPath="$PROJECT_DIR$/src/main/resources/views/singleperson.ftl" />
     </list>
     <ignored path="FindMe.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,75 +66,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AccountController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/AccountController.java">
+      <file leaf-file-name="OverviewController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/OverviewController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="586" max-vertical-offset="1476">
-              <caret line="69" column="57" selection-start-line="69" selection-start-column="57" selection-end-line="69" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1296">
+              <caret line="41" column="64" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SignUpController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/SignUpController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="702" max-vertical-offset="1512">
-              <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UUID.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/dev/tools/jdk1.7/src.zip!/java/util/UUID.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1898" max-vertical-offset="7596">
-              <caret line="140" column="19" selection-start-line="140" selection-start-column="19" selection-end-line="140" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PreRegPerson.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/PreRegPerson.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7060703" vertical-offset="620" max-vertical-offset="1692">
-              <caret line="61" column="5" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PersonModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/PersonModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="224" max-vertical-offset="2844">
-              <caret line="39" column="68" selection-start-line="39" selection-start-column="68" selection-end-line="39" selection-end-column="68" />
-              <folding>
-                <element signature="docComment;class#PersonModel#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PersonsQuery.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PersonsQuery.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/PersonsQuery.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="631" max-vertical-offset="2106">
-              <caret line="582" column="16" selection-start-line="582" selection-start-column="16" selection-end-line="582" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.25668448" vertical-offset="270" max-vertical-offset="1188">
+              <caret line="158" column="0" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
               <folding>
                 <element signature="method#searchByPersonNameOf#0;class#PersonsQuery#0" expanded="false" />
                 <element signature="method#getAllPersonsForGameLeaderBoard#0;class#PersonsQuery#0" expanded="false" />
                 <element signature="method#addPersonToStickerBookFor#0;class#PersonsQuery#0" expanded="false" />
                 <element signature="method#checkIfConnectionIsAlreadyPresent#0;class#PersonsQuery#0" expanded="false" />
                 <element signature="method#getAllPersonsForSBLeaderBoard#0;class#PersonsQuery#0" expanded="false" />
+                <element signature="e#9491#9514#0" expanded="true" />
                 <element signature="method#searchByPersonIdOf#0;class#PersonsQuery#0" expanded="false" />
                 <element signature="method#getPersonStringOfTheDay#0;class#PersonsQuery#0" expanded="false" />
                 <element signature="method#isValidPersonId#0;class#PersonsQuery#0" expanded="false" />
                 <element signature="method#getNumberOfStickersFor#0;class#PersonsQuery#0" expanded="false" />
+                <element signature="method#getIfUserHasPlayedForToday#0;class#PersonsQuery#0" expanded="false" />
                 <element signature="method#submitEntry#0;class#PersonsQuery#0" expanded="false" />
                 <element signature="method#updateGameData#0;class#PersonsQuery#0" expanded="false" />
                 <element signature="method#updateStickerBookData#0;class#PersonsQuery#0" expanded="false" />
@@ -159,11 +107,81 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="leaderboards.ftl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/views/leaderboards.ftl">
+      <file leaf-file-name="persondetails.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/views/persondetails.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1836" max-vertical-offset="2394">
-              <caret line="102" column="57" selection-start-line="102" selection-start-column="57" selection-end-line="102" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
+              <caret line="5" column="90" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="90" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="singleperson.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/views/singleperson.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1566">
+              <caret line="56" column="31" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dailycompetition.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/views/dailycompetition.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1944">
+              <caret line="10" column="68" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="digitalStickerBook.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/views/digitalStickerBook.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1674">
+              <caret line="10" column="68" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="account.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/views/account.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2646">
+              <caret line="10" column="68" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="registrationForm.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/views/registrationForm.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3276">
+              <caret line="10" column="68" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="homepage.ftl" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/views/homepage.ftl">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1908">
+              <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DailyCompetitionController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/DailyCompetitionController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="972">
+              <caret line="25" column="70" selection-start-line="25" selection-start-column="70" selection-end-line="25" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -702,35 +720,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/account.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/views/singleperson.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/PersonDAO.java" />
-        <option value="$PROJECT_DIR$/public/assets/javascripts/search-box.js" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/DatabaseConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/views/searchresults.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/OverviewController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/PersonController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/views/qrcode.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/RegistrationQuery.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/RegistrationModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/DailyCompetitionController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/views/successfulRegistration.ftl" />
-        <option value="$PROJECT_DIR$/functional-tests/src/test/java/uk/co/o2/findme/functionaltests/data/InsertFixturesUtility.java" />
         <option value="$PROJECT_DIR$/settings.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/GameDataObject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/StickerBookDataObject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/LeaderboardController.java" />
         <option value="$PROJECT_DIR$/public/assets/css/main.css" />
         <option value="$PROJECT_DIR$/src/main/resources/views/login.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/views/registrationForm.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/StickerBookPersonDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/views/account.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/StickerBookController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/LoginController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/views/connect.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/ConnectionController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/views/digitalStickerBook.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/views/homepage.ftl" />
         <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/GameDataObjectTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/GameDataObjectTest.java" />
         <option value="$PROJECT_DIR$/src/test/uk.co.o2.findme/dao/StickerBookDataObjectTest.java" />
@@ -743,16 +736,41 @@
         <option value="$PROJECT_DIR$/src/test/uk.co.o2.findme/testng.xml" />
         <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/ModelTests/PersonModelTest.java" />
         <option value="$PROJECT_DIR$/src/test/uk.co.o2.findme/dao/GameDataObjectTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/PreRegPersonTest.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/functional-tests/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/resources/views/dailycompetition.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/AccountController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/PersonModel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/PersonsQuery.java" />
         <option value="$PROJECT_DIR$/src/main/resources/views/leaderboards.ftl" />
-        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/SignUpController.java" />
         <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/PreRegPerson.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/SignUpController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/RegistrationModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/RegistrationQuery.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/LoginController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/PersonModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/PersonDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/GameDataObject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/PersonController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/AccountController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/ConnectionController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/DailyCompetitionController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/LeaderboardController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/StickerBookController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/PersonLoginDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/StickerBookDataObject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/StickerBookPersonDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/PreRegPersonTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/PersonDAOTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/PersonLoginDAOTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/GameDataObjectTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/StickerBookPersonDAOTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/StickerBookDataObjectTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/OverviewController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/PersonsQuery.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/views/persondetails.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/views/account.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/views/digitalStickerBook.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/views/registrationForm.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/views/dailycompetition.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/views/homepage.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/views/singleperson.ftl" />
       </list>
     </option>
   </component>
@@ -788,7 +806,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -1037,13 +1055,83 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="dao" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FindMe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TALENTUM_Find_Me" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="findme" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FindMe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TALENTUM_Find_Me" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FindMe" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TALENTUM_Find_Me" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1257,6 +1345,12 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
     <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
       <module name="" />
       <setting name="path" value="" />
@@ -1264,12 +1358,6 @@
       <setting name="params" value="" />
       <setting name="workDir" value="file://$PROJECT_DIR$" />
       <setting name="debug" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
@@ -1322,19 +1410,6 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1361,6 +1436,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1483,13 +1571,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277592" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3273743" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27090302" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26703912" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1507,23 +1595,23 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
     <layout-to-restore>
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32849163" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19116081" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1562,18 +1650,24 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/PersonsQuery.java</url>
-          <line>320</line>
-          <properties />
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/PersonsQuery.java</url>
           <line>560</line>
           <properties />
           <option name="timeStamp" value="12" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/PersonsQuery.java</url>
+          <line>506</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/PersonsQuery.java</url>
+          <line>613</line>
+          <properties />
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="13" />
+      <option name="time" value="19" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1582,304 +1676,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/PersonModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="224" max-vertical-offset="2844">
-          <caret line="39" column="68" selection-start-line="39" selection-start-column="68" selection-end-line="39" selection-end-column="68" />
-          <folding>
-            <element signature="docComment;class#PersonModel#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/PersonsQuery.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2106">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="method#searchByPersonNameOf#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#getAllPersonsForGameLeaderBoard#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#addPersonToStickerBookFor#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#checkIfConnectionIsAlreadyPresent#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#getAllPersonsForSBLeaderBoard#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#searchByPersonIdOf#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#getPersonStringOfTheDay#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#isValidPersonId#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#getNumberOfStickersFor#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#submitEntry#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#updateGameData#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#updateStickerBookData#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#updateUser#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#getAllSBPersonsFor#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#emailMatchCheck#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#getPersonIdBy#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#getCountOfPersonsTable#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#getPasswordAndSaltFor#0;class#PersonsQuery#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.062068965" vertical-offset="0" max-vertical-offset="580">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/StickerBookDataObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
-          <caret line="21" column="46" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6081081" vertical-offset="2646" max-vertical-offset="5724">
-          <caret line="167" column="14" selection-start-line="167" selection-start-column="14" selection-end-line="167" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/views/signupform.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2664">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/views/registrationForm.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="702" max-vertical-offset="3294">
-          <caret line="39" column="73" selection-start-line="39" selection-start-column="73" selection-end-line="39" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/LeaderboardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="205" max-vertical-offset="810">
-          <caret line="35" column="36" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/StickerBookPersonDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="774">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.ws.rs/javax.ws.rs-api/2.0/6800b5f794beb9809d8fef83d21e157b0db6ee19/javax.ws.rs-api-2.0-sources.jar!/javax/ws/rs/PathParam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="756" max-vertical-offset="1422">
-          <caret line="101" column="18" selection-start-line="101" selection-start-column="18" selection-end-line="101" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.ws.rs/javax.ws.rs-api/2.0/6800b5f794beb9809d8fef83d21e157b0db6ee19/javax.ws.rs-api-2.0-sources.jar!/javax/ws/rs/Path.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1692">
-          <caret line="50" column="2" selection-start-line="50" selection-start-column="2" selection-end-line="50" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.ws.rs/javax.ws.rs-api/2.0/6800b5f794beb9809d8fef83d21e157b0db6ee19/javax.ws.rs-api-2.0-sources.jar!/javax/ws/rs/GET.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-          <caret line="52" column="16" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.ws.rs/javax.ws.rs-api/2.0/6800b5f794beb9809d8fef83d21e157b0db6ee19/javax.ws.rs-api-2.0-sources.jar!/javax/ws/rs/HttpMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="14" max-vertical-offset="1116">
-          <caret line="54" column="11" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/views/overview.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="792">
-          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.ws.rs/javax.ws.rs-api/2.0/6800b5f794beb9809d8fef83d21e157b0db6ee19/javax.ws.rs-api-2.0-sources.jar!/javax/ws/rs/core/Response.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="230" max-vertical-offset="25812">
-          <caret line="74" column="22" selection-start-line="74" selection-start-column="22" selection-end-line="74" selection-end-column="22" />
-          <folding>
-            <element signature="e#33442#33443#0" expanded="false" />
-            <element signature="e#33508#33509#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/javax.servlet/servlet-api/2.4/f37965508b58253b45c8accc02cd6c652380545f/servlet-api-2.4-sources.jar!/javax/servlet/http/HttpServletRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="4046" max-vertical-offset="7650">
-          <caret line="258" column="18" selection-start-line="258" selection-start-column="18" selection-end-line="258" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/OverviewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="1278">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="51" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="564" max-vertical-offset="1278">
-          <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/views/searchresults.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.84" vertical-offset="0" max-vertical-offset="1332">
-          <caret line="46" column="31" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/views/login.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-28.08" vertical-offset="0" max-vertical-offset="1278">
-          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/PersonController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="774">
-          <caret line="24" column="30" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/views/connect.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80689657" vertical-offset="198" max-vertical-offset="1404">
-          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/StickerBookController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-          <caret line="35" column="40" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/views/homepage.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.52" vertical-offset="142" max-vertical-offset="1908">
-          <caret line="35" column="70" selection-start-line="35" selection-start-column="70" selection-end-line="35" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/views/digitalStickerBook.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.36" vertical-offset="1063" max-vertical-offset="1692">
-          <caret line="79" column="28" selection-start-line="79" selection-start-column="28" selection-end-line="79" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/ConnectionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6213592" vertical-offset="246" max-vertical-offset="864">
-          <caret line="35" column="69" selection-start-line="35" selection-start-column="69" selection-end-line="35" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/GameDataObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/views/account.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.04" vertical-offset="343" max-vertical-offset="2664">
-          <caret line="33" column="46" selection-start-line="33" selection-start-column="37" selection-end-line="33" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/StickerBookDataObjectTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
-          <caret line="18" column="5" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/PersonLoginDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="684">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/SaltAndHashDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15734266" vertical-offset="0" max-vertical-offset="572">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/SaltAndHashDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <caret line="9" column="101" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/PersonDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="756">
-          <caret line="0" column="8" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/StickerBookPersonDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
-          <caret line="9" column="116" selection-start-line="9" selection-start-column="91" selection-end-line="9" selection-end-column="116" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/PreRegPersonTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="846">
-          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/testng/lib/testng.jar!/org/testng/Assert.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18120806" vertical-offset="0" max-vertical-offset="6894">
           <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/PersonLoginDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28846154" vertical-offset="0" max-vertical-offset="624">
-          <caret line="13" column="12" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/GameDataObjectTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23076923" vertical-offset="0" max-vertical-offset="624">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1897,20 +1697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/DailyCompetitionController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39423078" vertical-offset="348" max-vertical-offset="972">
-          <caret line="43" column="42" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/views/dailycompetition.ftl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91325694" vertical-offset="684" max-vertical-offset="1962">
-          <caret line="69" column="60" selection-start-line="69" selection-start-column="60" selection-end-line="69" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/ModelTests/PersonModelTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1908">
@@ -1918,55 +1704,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/PersonModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="224" max-vertical-offset="2844">
-          <caret line="39" column="68" selection-start-line="39" selection-start-column="68" selection-end-line="39" selection-end-column="68" />
-          <folding>
-            <element signature="docComment;class#PersonModel#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/PersonsQuery.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="631" max-vertical-offset="2106">
-          <caret line="582" column="16" selection-start-line="582" selection-start-column="16" selection-end-line="582" selection-end-column="16" />
-          <folding>
-            <element signature="method#searchByPersonNameOf#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#getAllPersonsForGameLeaderBoard#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#addPersonToStickerBookFor#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#checkIfConnectionIsAlreadyPresent#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#getAllPersonsForSBLeaderBoard#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#searchByPersonIdOf#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#getPersonStringOfTheDay#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#isValidPersonId#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#getNumberOfStickersFor#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#submitEntry#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#updateGameData#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#updateStickerBookData#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#updateUser#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#getAllSBPersonsFor#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#emailMatchCheck#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#getPersonIdBy#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#getCountOfPersonsTable#0;class#PersonsQuery#0" expanded="false" />
-            <element signature="method#getPasswordAndSaltFor#0;class#PersonsQuery#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/views/leaderboards.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1565" max-vertical-offset="2394">
           <caret line="102" column="57" selection-start-line="102" selection-start-column="57" selection-end-line="102" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/AccountController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="586" max-vertical-offset="1476">
-          <caret line="69" column="57" selection-start-line="69" selection-start-column="57" selection-end-line="69" selection-end-column="57" />
           <folding />
         </state>
       </provider>
@@ -1979,21 +1720,369 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/RegistrationModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="116" max-vertical-offset="810">
+          <caret line="30" column="46" selection-start-line="30" selection-start-column="46" selection-end-line="30" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/SaltAndHashModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.66346157" vertical-offset="0" max-vertical-offset="1494">
+          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/PersonDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65384614" vertical-offset="600" max-vertical-offset="1602">
+          <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/RegistrationQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1399" max-vertical-offset="4428">
+          <caret line="104" column="56" selection-start-line="104" selection-start-column="56" selection-end-line="104" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/dev/tools/jdk1.7/src.zip!/java/sql/PreparedStatement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="2330" max-vertical-offset="21654">
+          <caret line="167" column="9" selection-start-line="167" selection-start-column="9" selection-end-line="167" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/GameDataObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50961536" vertical-offset="276" max-vertical-offset="900">
+          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/PersonController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="774">
+          <caret line="39" column="48" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/AccountController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1476">
+          <caret line="60" column="18" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/ConnectionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="738">
+          <caret line="29" column="14" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/LeaderboardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
+          <caret line="30" column="50" selection-start-line="30" selection-start-column="50" selection-end-line="30" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/SplashPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14423077" vertical-offset="0" max-vertical-offset="624">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/PersonLoginDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="684">
+          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="1278">
+          <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/SaltAndHashDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/StickerBookDataObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="900">
+          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/StickerBookPersonDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="96" max-vertical-offset="774">
+          <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/PersonSearchResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="486">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/SearchModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="522">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/PreRegPerson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="404" max-vertical-offset="1692">
+          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/PreRegPersonTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="954">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/PersonLoginDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
+          <caret line="11" column="63" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/PersonDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="792">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/GameDataObjectTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/StickerBookPersonDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="414">
+          <caret line="12" column="78" selection-start-line="12" selection-start-column="78" selection-end-line="12" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/functionaltests/DAOTests/StickerBookDataObjectTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
+          <caret line="11" column="80" selection-start-line="11" selection-start-column="80" selection-end-line="11" selection-end-column="80" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/StickerBookController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
+          <caret line="27" column="60" selection-start-line="27" selection-start-column="60" selection-end-line="27" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/SignUpController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="702" max-vertical-offset="1512">
-          <caret line="50" column="36" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="523" max-vertical-offset="1512">
+          <caret line="50" column="53" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/dao/PreRegPerson.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/PersonModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7060703" vertical-offset="620" max-vertical-offset="1692">
-          <caret line="61" column="5" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="295" max-vertical-offset="2844">
+          <caret line="39" column="53" selection-start-line="39" selection-start-column="53" selection-end-line="39" selection-end-column="53" />
+          <folding>
+            <element signature="docComment;class#PersonModel#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/DailyCompetitionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="972">
+          <caret line="25" column="70" selection-start-line="25" selection-start-column="70" selection-end-line="25" selection-end-column="70" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/controller/OverviewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="108" max-vertical-offset="1296">
+          <caret line="41" column="64" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/images/default_profile.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/images/favicon.ico">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/images/glyphicons-halflings.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/images/glyphicons-halflings-white.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/images/question_mark.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/images/smiley_happy.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/images/smiley_sad.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/views/persondetails.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
+          <caret line="5" column="90" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/views/account.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2646">
+          <caret line="10" column="68" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/views/digitalStickerBook.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1674">
+          <caret line="10" column="68" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/views/dailycompetition.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1944">
+          <caret line="10" column="68" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/views/registrationForm.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3276">
+          <caret line="10" column="68" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/views/homepage.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1908">
+          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/views/singleperson.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1566">
+          <caret line="56" column="31" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/PersonsQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25668448" vertical-offset="270" max-vertical-offset="1188">
+          <caret line="158" column="0" selection-start-line="158" selection-start-column="0" selection-end-line="158" selection-end-column="0" />
+          <folding>
+            <element signature="method#searchByPersonNameOf#0;class#PersonsQuery#0" expanded="false" />
+            <element signature="method#getAllPersonsForGameLeaderBoard#0;class#PersonsQuery#0" expanded="false" />
+            <element signature="method#addPersonToStickerBookFor#0;class#PersonsQuery#0" expanded="false" />
+            <element signature="method#checkIfConnectionIsAlreadyPresent#0;class#PersonsQuery#0" expanded="false" />
+            <element signature="method#getAllPersonsForSBLeaderBoard#0;class#PersonsQuery#0" expanded="false" />
+            <element signature="e#9491#9514#0" expanded="true" />
+            <element signature="method#searchByPersonIdOf#0;class#PersonsQuery#0" expanded="false" />
+            <element signature="method#getPersonStringOfTheDay#0;class#PersonsQuery#0" expanded="false" />
+            <element signature="method#isValidPersonId#0;class#PersonsQuery#0" expanded="false" />
+            <element signature="method#getNumberOfStickersFor#0;class#PersonsQuery#0" expanded="false" />
+            <element signature="method#getIfUserHasPlayedForToday#0;class#PersonsQuery#0" expanded="false" />
+            <element signature="method#submitEntry#0;class#PersonsQuery#0" expanded="false" />
+            <element signature="method#updateGameData#0;class#PersonsQuery#0" expanded="false" />
+            <element signature="method#updateStickerBookData#0;class#PersonsQuery#0" expanded="false" />
+            <element signature="method#updateUser#0;class#PersonsQuery#0" expanded="false" />
+            <element signature="method#getAllSBPersonsFor#0;class#PersonsQuery#0" expanded="false" />
+            <element signature="method#emailMatchCheck#0;class#PersonsQuery#0" expanded="false" />
+            <element signature="method#getPersonIdBy#0;class#PersonsQuery#0" expanded="false" />
+            <element signature="method#getCountOfPersonsTable#0;class#PersonsQuery#0" expanded="false" />
+            <element signature="method#getPasswordAndSaltFor#0;class#PersonsQuery#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -26,8 +26,8 @@ public class ConnectionController {
     @Path("/add")
     public Response connect(@PathParam("id") String id, @FormParam("email") String email) {
 
-        int userID = Integer.parseInt(personModel.getPersonIdByEmail(email));
-        int targetUserID = Integer.parseInt(id);
+        String userID = personModel.getPersonIdByEmail(email);
+        String targetUserID = id;
         Map<String, Object> model = new HashMap();
 
         if(personModel.checkIfConnectionIsAlreadyPresent(userID, targetUserID)) {

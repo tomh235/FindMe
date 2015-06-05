@@ -20,9 +20,9 @@ public class DailyCompetitionController {
 
     @GET
     public Response getPerson(@CookieParam(value = "findmeLoggedIn") Cookie loginCookie) {
-        final PersonDAO currentUser = personModel.getPersonById(Integer.parseInt(loginCookie.getValue()));
-        final String numberOfStickers = personModel.getStickerBookNumber(Integer.parseInt(loginCookie.getValue()));
-        final boolean hasPlayed = personModel.getIfCompetedFor(Integer.parseInt(loginCookie.getValue()));
+        final PersonDAO currentUser = personModel.getPersonById(loginCookie.getValue());
+        final String numberOfStickers = personModel.getStickerBookNumber(loginCookie.getValue());
+        final boolean hasPlayed = personModel.getIfCompetedFor(loginCookie.getValue());
         final String guessString = personModel.getCompetitionPerson();
         Map<String, Object> model = new HashMap();
         model.put("currentUser", currentUser);
@@ -35,21 +35,21 @@ public class DailyCompetitionController {
     @POST
     public Response submitUserEntry(@CookieParam(value = "findmeLoggedIn") Cookie loginCookie, @FormParam("entry") String entry) {
         Map<String, Object> model = new HashMap();
-        final PersonDAO currentUser = personModel.getPersonById(Integer.parseInt(loginCookie.getValue()));
-        final String numberOfStickers = personModel.getStickerBookNumber(Integer.parseInt(loginCookie.getValue()));
+        final PersonDAO currentUser = personModel.getPersonById(loginCookie.getValue());
+        final String numberOfStickers = personModel.getStickerBookNumber(loginCookie.getValue());
 
         model.put("currentUser", currentUser);
         model.put("stickerCount", numberOfStickers);
 
-        String result = personModel.submitEntry(Integer.parseInt(loginCookie.getValue()), entry);
+        String result = personModel.submitEntry(loginCookie.getValue(), entry);
         System.out.println(result);
 
         if(Objects.equals(result, "success")) {
-            final boolean previouslyPlayed = personModel.getIfCompetedFor(Integer.parseInt(loginCookie.getValue()));
+            final boolean previouslyPlayed = personModel.getIfCompetedFor(loginCookie.getValue());
             model.put("hasPlayed", previouslyPlayed);
             model.put("guessString", "All sorted! Your guess has been received. Thank you for playing and we hope you win!");
         } else if(Objects.equals(result, "fail")) {
-            final boolean previouslyPlayed = personModel.getIfCompetedFor(Integer.parseInt(loginCookie.getValue()));
+            final boolean previouslyPlayed = personModel.getIfCompetedFor(loginCookie.getValue());
             model.put("hasPlayed", previouslyPlayed);
             model.put("guessString", "Gosh! Something has gone wrong. Sorry about this. We'll look into it! (or try again)");
         }

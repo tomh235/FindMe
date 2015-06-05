@@ -4,10 +4,14 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import uk.co.o2.findme.dao.PersonDAO;
 
+import static java.util.UUID.randomUUID;
+
 public class PersonDAOTest {
 
+    private final String newPersonId = randomUUID().toString();
+
     PersonDAO personObject = new PersonDAO(
-            0,
+            newPersonId,
             "Boris", "Yeltsin",
             "http://google.co.uk/image",
             "boris.yeltsin@o2.com",
@@ -22,7 +26,7 @@ public class PersonDAOTest {
 
     @Test
     public void testPersonDAOObject() {
-        Assert.assertEquals(0, personObject.getPersonId());
+        Assert.assertEquals(newPersonId, personObject.getPersonId());
         Assert.assertEquals("Boris", personObject.getFirstName());
         Assert.assertEquals("Yeltsin", personObject.getLastName());
         Assert.assertEquals("boris.yeltsin@o2.com", personObject.getEmail());

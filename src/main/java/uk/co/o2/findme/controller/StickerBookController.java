@@ -25,10 +25,10 @@ public class StickerBookController {
 
     @GET
     public Response getPerson(@CookieParam(value = "findmeLoggedIn") Cookie loginCookie) {
-        final PersonDAO currentUser = personModel.getPersonById(Integer.parseInt(loginCookie.getValue()));
-        final String numberOfStickers = personModel.getStickerBookNumber(Integer.parseInt(loginCookie.getValue()));
-        final boolean hasPlayed = personModel.getIfCompetedFor(Integer.parseInt(loginCookie.getValue()));
-        final List<StickerBookPersonDAO> stickerBookPersonList = personModel.getPeopleInStickerBookFor(Integer.parseInt(loginCookie.getValue()));
+        final PersonDAO currentUser = personModel.getPersonById(loginCookie.getValue());
+        final String numberOfStickers = personModel.getStickerBookNumber(loginCookie.getValue());
+        final boolean hasPlayed = personModel.getIfCompetedFor(loginCookie.getValue());
+        final List<StickerBookPersonDAO> stickerBookPersonList = personModel.getPeopleInStickerBookFor(loginCookie.getValue());
         Map<String, Object> model = new HashMap();
         model.put("currentUser", currentUser);
         model.put("stickerCount", numberOfStickers);
