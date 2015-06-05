@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/FindMe.iml" filepath="$PROJECT_DIR$/FindMe.iml" />
       <module fileurl="file://$PROJECT_DIR$/TALENTUM_Find_Me.iml" filepath="$PROJECT_DIR$/TALENTUM_Find_Me.iml" />
       <module fileurl="file://$PROJECT_DIR$/findme-database-utils/findme-database-utils.iml" filepath="$PROJECT_DIR$/findme-database-utils/findme-database-utils.iml" />
-      <module fileurl="file://$PROJECT_DIR$/functional-tests/functional-tests.iml" filepath="$PROJECT_DIR$/functional-tests/functional-tests.iml" />
     </modules>
   </component>
 </project>

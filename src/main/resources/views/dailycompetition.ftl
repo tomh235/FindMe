@@ -66,7 +66,7 @@
                             </div>
                             <div class="panel-body">
                                 <#if hasPlayed == true>
-                                    <p>You've played already today! Hope it was correct :) Come back again tomorrow for another try.</p>
+                                    <p>You've played Guess Who today! Hope it was correct :) Come back again tomorrow for another try.</p>
                                 <#elseif hasPlayed == false>
                                     <h4>How to play <i id="gameInfoToggle" onclick="javascript:toggleDiv();" class="fa fa-info-circle"></i></h4>
                                     <div id="infoContent" style="display:none">

@@ -37,16 +37,9 @@ public class PersonModel {
     }
 
     public boolean getIfCompetedFor(int personID) {
-        Date dt = new Date();
+        boolean hasPlayed = personsQuery.getIfUserHasPlayedForToday(personID);
 
-        SimpleDateFormat sdf =
-                new SimpleDateFormat("yyyy-MM-dd");
-
-        String currentDate = sdf.format(dt);
-        String dateofLastPlay = personsQuery.getDateOfLastPlayed(personID);
-        System.out.println(currentDate + " | " + dateofLastPlay);
-
-        return dateofLastPlay.equals(currentDate);
+        return hasPlayed;
     }
 
     public String getCompetitionPerson() {

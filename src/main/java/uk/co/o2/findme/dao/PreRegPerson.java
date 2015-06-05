@@ -8,7 +8,7 @@ import uk.co.o2.findme.model.SearchResultsModel;
 public class PreRegPerson implements SearchResultsModel {
 
     // Fields
-    private int personId;
+    private String personId;
     private String firstName;
     private String lastName;
     private String email;
@@ -23,7 +23,8 @@ public class PreRegPerson implements SearchResultsModel {
     private String status;
     private String teamName;
 
-    public PreRegPerson(String firstName,
+    public PreRegPerson(String personId,
+                        String firstName,
                         String lastName,
                         String email,
                         String photo,
@@ -37,6 +38,7 @@ public class PreRegPerson implements SearchResultsModel {
                         String status,
                         String teamName)
     {
+        this.personId = personId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.photo = photo;
@@ -55,7 +57,7 @@ public class PreRegPerson implements SearchResultsModel {
 
     // Getters
 
-    public int getPersonId() {
+    public String getPersonId() {
         return personId;
     }
 

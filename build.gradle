@@ -74,6 +74,7 @@ dependencies {
     compile 'org.hibernate:hibernate-validator-annotation-processor:5.0.3.Final'
     compile 'javax.el:javax.el-api:2.2.4'
     compile 'org.glassfish.web:javax.el:2.2.4'
+    compile "org.testng:testng:6.9.4"
     // end Hibernate Validator dependencies
 
     compile 'net.glxn.qrgen:javase:2.0'
@@ -87,6 +88,7 @@ dependencies {
     testCompile "junit:junit:4.11"
     testCompile "org.hamcrest:hamcrest-all:1.1"
     testCompile "org.mockito:mockito-all:1.9.5"
+    testCompile "org.testng:testng:6.9.4"
 
     testCompile "org.neo4j:neo4j-kernel:1.9.8:tests"
     testCompile "org.neo4j.app:neo4j-server:1.9.8"
@@ -101,6 +103,26 @@ task ('tomcatDaemonRunWar', type: org.gradle.api.plugins.tomcat.TomcatRunWar, de
     httpPort = 9001
     daemon = true
     // tasks[':functional-tests:integration'].execute()
+}
+
+task ('testng', type: Test, description: 'Runs TestNG tests.') {
+
+}
+
+test {
+    useTestNG {
+        suites 'src/main/resources/testng.xml'
+    }
+
+    testLogging.showStandardStreams = true
+
+    beforeTest { descriptor ->
+        logger.lifecycle("Running test: " + descriptor)
+    }
+
+    onOutput { descriptor, event ->
+        logger.lifecycle("Test: " + descriptor + " produced standard out/err: " + event.message )
+    }
 }
 
 war {

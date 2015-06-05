@@ -100,7 +100,7 @@
                                           <tr>
                                             <th>Name</th>
                                             <th>Job Title</th>
-                                            <th>StickerBook Score</th>
+                                            <th>Sticker book Score</th>
                                           </tr>
                                         </thead>
                                         <tbody>

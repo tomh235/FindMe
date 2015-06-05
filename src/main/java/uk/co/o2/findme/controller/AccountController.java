@@ -66,8 +66,8 @@ public class AccountController {
         personModel.updatePersonDetails(personID, firstName, lastName, email, phoneNumber, picture, jobTitle, team, project, location, details, "Active");
 
         final PersonDAO person = personModel.getPersonById(personID);
-        final String numberOfStickers = personModel.getStickerBookNumber(Integer.parseInt(loginCookie.getValue()));
-        final boolean hasPlayed = personModel.getIfCompetedFor(Integer.parseInt(loginCookie.getValue()));
+        final String numberOfStickers = personModel.getStickerBookNumber(personID);
+        final boolean hasPlayed = personModel.getIfCompetedFor(personID);
         Map<String, Object> model = new HashMap();
         model.put("person", person);
         model.put("stickerCount", numberOfStickers);

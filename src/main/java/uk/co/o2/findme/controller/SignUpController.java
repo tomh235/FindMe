@@ -2,30 +2,19 @@ package uk.co.o2.findme.controller;
 
 import org.glassfish.jersey.server.mvc.Viewable;
 import uk.co.o2.findme.application.FindMe;
-import uk.co.o2.findme.dao.PersonDAO;
 import uk.co.o2.findme.dao.PreRegPerson;
 import uk.co.o2.findme.dao.SaltAndHashDAO;
 import uk.co.o2.findme.model.PersonModel;
 import uk.co.o2.findme.model.RegistrationModel;
 import uk.co.o2.findme.model.SaltAndHashModel;
+import static java.util.UUID.randomUUID;
 
-import javax.crypto.BadPaddingException;
-import javax.crypto.IllegalBlockSizeException;
-import javax.crypto.NoSuchPaddingException;
-import javax.crypto.ShortBufferException;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Cookie;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.NewCookie;
 import javax.ws.rs.core.Response;
-import java.io.UnsupportedEncodingException;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
-import java.security.NoSuchProviderException;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 
@@ -59,6 +48,7 @@ public class SignUpController {
                                      @FormParam("currentProject") String currentProject,
                                      @FormParam("location") String location) throws Exception {
         System.out.print("## " + photo + "\n");
+        String newPersonId = randomUUID().toString();
         SaltAndHashDAO saltAndHashDAO = saltAndHashModel.createUserHash(password);
         PreRegPerson preRegPerson = new PreRegPerson(firstName, lastName, email, photo, phoneNumber, saltAndHashDAO.getSalt(), saltAndHashDAO.getPasswordHash(), jobTitle, location, currentProject, details, "Active", team);
         System.out.print(preRegPerson.getJobTitle());

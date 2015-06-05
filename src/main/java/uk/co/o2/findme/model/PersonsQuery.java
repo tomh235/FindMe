@@ -557,10 +557,10 @@ public class PersonsQuery {
         return numberOfStickers;
     }
 
-    public String getDateOfLastPlayed(int personID) {
+    public boolean getIfUserHasPlayedForToday(int personID) {
         Connection conn = null;
         PreparedStatement pstmt = null;
-        String dateOfLastPlayed = null;
+        boolean hasPlayed = false;
 
         try{
             //STEP 2: Register JDBC driver
@@ -571,7 +571,7 @@ public class PersonsQuery {
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
             //STEP 4: Execute a query and add results to list
-            String sql = "SELECT lastGameEntry FROM gameData WHERE idPerson = ?";
+            String sql = "SELECT idPerson FROM competitionData WHERE idPerson = ?";
 
             pstmt = conn.prepareStatement(sql);
             pstmt.setInt(1, personID);
@@ -580,7 +580,7 @@ public class PersonsQuery {
 
             while(rs.next())
             {
-                dateOfLastPlayed = rs.getString("lastGameEntry");
+                hasPlayed = true;
             }
 
             //STEP 5: Clean-up environment
@@ -607,7 +607,7 @@ public class PersonsQuery {
                 se.printStackTrace();
             }//end finally try
         }//end try
-        return dateOfLastPlayed;
+        return hasPlayed;
     }
 
     public String submitEntry(int personID, String entry) {
@@ -675,7 +675,7 @@ public class PersonsQuery {
 
             //STEP 4: Execute a query and add results to list
             String sql = "UPDATE gameData " +
-                    "SET gameScore=gameScore+1, lastGameEntry=? " +
+                    "SET  lastGameEntry=? " +
                     "WHERE idPerson=?";
 
 

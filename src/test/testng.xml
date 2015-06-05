@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="DAO_Tests">
+    <test name="TestDAO">
+        <classes>
+            <class name="uk.co.o2.findme.functionaltests.DAOTests.GameDataObjectTest"/>
+            <class name="uk.co.o2.findme.functionaltests.DAOTests.StickerBookDataObjectTest"/>
+            <class name="uk.co.o2.findme.functionaltests.DAOTests.PersonLoginDAOTest"/>
+            <class name="uk.co.o2.findme.functionaltests.DAOTests.SaltAndHashDAOTest"/>
+            <class name="uk.co.o2.findme.functionaltests.DAOTests.StickerBookPersonDAOTest"/>
+            <class name="uk.co.o2.findme.functionaltests.DAOTests.PersonDAOTest"/>
+            <class name="uk.co.o2.findme.functionaltests.DAOTests.PreRegPersonTest"/>
+        </classes>
+    </test>
+
+    <test name="TestModels">
+        <classes>
+            <class name="uk.co.o2.findme.functionaltests.DAOTests.GameDataObjectTest"/>
+            <class name="uk.co.o2.findme.functionaltests.DAOTests.StickerBookDataObjectTest"/>
+            <class name="uk.co.o2.findme.functionaltests.DAOTests.PersonLoginDAOTest"/>
+            <class name="uk.co.o2.findme.functionaltests.DAOTests.SaltAndHashDAOTest"/>
+            <class name="uk.co.o2.findme.functionaltests.DAOTests.StickerBookPersonDAOTest"/>
+            <class name="uk.co.o2.findme.functionaltests.DAOTests.PersonDAOTest"/>
+            <class name="uk.co.o2.findme.functionaltests.DAOTests.PreRegPersonTest"/>
+        </classes>
+    </test>
+</suite>
