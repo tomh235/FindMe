@@ -181,6 +181,11 @@ task ('findmeDeploy', type: Exec, dependsOn:['war', 'copyToLib'], ) {
     args = ['-jar', 'build/libs/webapp-runner.jar', '--port', '9000', 'build/libs/FindMe.war']
 }
 
+task ('buildWar', type: Exec, dependsOn:['war', 'copyToLib'], ) {
+    commandLine 'jar'
+    args = ['-cvf', 'FindMe.war', 'build/libs/FindMe.war']
+}
+
 task ('stage', dependsOn: ['clean', 'war', 'copyToLib']) << {
     println "Running stage"
 }
