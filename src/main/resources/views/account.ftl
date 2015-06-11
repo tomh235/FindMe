@@ -127,7 +127,7 @@
                 <div class="col-md-4 col-md-offset-2">
                     <h3>Generate QR code</h3>
                     <p>If your original QR code has been lost or damaged, then print a new one using this link:</p>
-                    <a href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${(QRCodeLink)!""}">Request new QR code</a>
+                    <a href="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${(person.personId)!""}">Request new QR code</a>
                 </div>
             </div>
         </div>

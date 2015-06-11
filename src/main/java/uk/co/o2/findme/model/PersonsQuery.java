@@ -31,7 +31,6 @@ public class PersonsQuery {
             Class.forName("com.mysql.jdbc.Driver");
 
             //STEP 3: Open a connection
-            System.out.println("Connecting to database...");
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
             //STEP 4: Execute a query and add results to list
@@ -105,7 +104,6 @@ public class PersonsQuery {
             Class.forName("com.mysql.jdbc.Driver");
 
             //STEP 3: Open a connection
-            System.out.println("Connecting to database...");
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
             //STEP 4: Execute a query and add results to list
@@ -166,7 +164,6 @@ public class PersonsQuery {
             Class.forName("com.mysql.jdbc.Driver");
 
             //STEP 3: Open a connection
-            System.out.println("Connecting to database...");
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
             //STEP 4: Execute a query and add results to list
@@ -213,7 +210,6 @@ public class PersonsQuery {
             Class.forName("com.mysql.jdbc.Driver");
 
             //STEP 3: Open a connection
-            System.out.println("Connecting to database...");
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
             //STEP 4: Execute a query and add results to list
@@ -266,7 +262,6 @@ public class PersonsQuery {
             Class.forName("com.mysql.jdbc.Driver");
 
             //STEP 3: Open a connection
-            System.out.println("Connecting to database...");
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
             //STEP 4: Execute a query and add results to list
@@ -327,7 +322,6 @@ public class PersonsQuery {
             Class.forName("com.mysql.jdbc.Driver");
 
             //STEP 3: Open a connection
-            System.out.println("Connecting to database...");
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
             //STEP 4: Execute a query and add results to list
@@ -399,7 +393,6 @@ public class PersonsQuery {
             Class.forName("com.mysql.jdbc.Driver");
 
             //STEP 3: Open a connection
-            System.out.println("Connecting to database...");
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
             //STEP 4: Execute a query and add results to list
@@ -457,7 +450,6 @@ public class PersonsQuery {
             Class.forName("com.mysql.jdbc.Driver");
 
             //STEP 3: Open a connection
-            System.out.println("Connecting to database...");
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
             //STEP 4: Execute a query and add results to list
@@ -513,7 +505,6 @@ public class PersonsQuery {
             Class.forName("com.mysql.jdbc.Driver");
 
             //STEP 3: Open a connection
-            System.out.println("Connecting to database...");
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
             //STEP 4: Execute a query and add results to list
@@ -567,7 +558,6 @@ public class PersonsQuery {
             Class.forName("com.mysql.jdbc.Driver");
 
             //STEP 3: Open a connection
-            System.out.println("Connecting to database...");
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
             //STEP 4: Execute a query and add results to list
@@ -619,7 +609,6 @@ public class PersonsQuery {
             Class.forName("com.mysql.jdbc.Driver");
 
             //STEP 3: Open a connection
-            System.out.println("Connecting to database...");
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
             //STEP 4: Execute a query and add results to list
@@ -670,7 +659,6 @@ public class PersonsQuery {
             Class.forName("com.mysql.jdbc.Driver");
 
             //STEP 3: Open a connection
-            System.out.println("Connecting to database...");
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
             //STEP 4: Execute a query and add results to list
@@ -725,7 +713,6 @@ public class PersonsQuery {
             Class.forName("com.mysql.jdbc.Driver");
 
             //STEP 3: Open a connection
-            System.out.println("Connecting to database...");
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
             //STEP 4: Execute a query and add results to list
@@ -779,7 +766,6 @@ public class PersonsQuery {
             Class.forName("com.mysql.jdbc.Driver");
 
             //STEP 3: Open a connection
-            System.out.println("Connecting to database...");
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
             //STEP 4: Execute a query and add results to list
@@ -843,7 +829,6 @@ public class PersonsQuery {
             Class.forName("com.mysql.jdbc.Driver");
 
             //STEP 3: Open a connection
-            System.out.println("Connecting to database...");
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
             //STEP 4: Execute a query and add results to list
@@ -905,7 +890,6 @@ public class PersonsQuery {
             Class.forName("com.mysql.jdbc.Driver");
 
             //STEP 3: Open a connection
-            System.out.println("Connecting to database...");
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
 
             //STEP 4: Execute a query and add results to list
@@ -959,7 +943,6 @@ public class PersonsQuery {
             Class.forName("com.mysql.jdbc.Driver");
 
             //STEP 3: Open a connection
-            System.out.println("Connecting to database...");
             conn = DriverManager.getConnection(DB_URL, DatabaseConfiguration.db_username2, DatabaseConfiguration.db_pass2);
 
             //STEP 4: Execute a query and add results to list
@@ -1013,7 +996,6 @@ public class PersonsQuery {
             Class.forName("com.mysql.jdbc.Driver");
 
             //STEP 3: Open a connection
-            System.out.println("Connecting to database...");
             conn = DriverManager.getConnection(DB_URL, DatabaseConfiguration.db_username2, DatabaseConfiguration.db_pass2);
 
             //STEP 4: Execute a query and add results to list
@@ -1064,7 +1046,6 @@ public class PersonsQuery {
             Class.forName("com.mysql.jdbc.Driver");
 
             //STEP 3: Open a connection
-            System.out.println("Connecting to database...");
             conn = DriverManager.getConnection(DB_URL, DatabaseConfiguration.db_username2, DatabaseConfiguration.db_pass2);
 
             //STEP 4: Execute a query and add results to list

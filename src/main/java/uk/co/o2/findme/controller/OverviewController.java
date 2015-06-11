@@ -39,7 +39,7 @@ public class OverviewController {
                     final String populationCount = personModel.getNumberOfPeopleInDatabase();
                     final String numberOfStickers = personModel.getStickerBookNumber(loginCookie.getValue());
                     final boolean hasPlayed = personModel.getIfCompetedFor(loginCookie.getValue());
-                    System.out.println(randomUUID().toString());
+
                     Map<String, Object> model = new HashMap();
                     model.put("currentUser", currentUser);
                     model.put("popCount", populationCount);

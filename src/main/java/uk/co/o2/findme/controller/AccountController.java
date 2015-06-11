@@ -72,7 +72,7 @@ public class AccountController {
         model.put("person", person);
         model.put("stickerCount", numberOfStickers);
         model.put("hasPlayed", hasPlayed);
-        return Response.ok().entity(new Viewable("/account.ftl", person)).build();
+        return Response.ok().entity(new Viewable("/account.ftl", model)).build();
     }
 
     @GET

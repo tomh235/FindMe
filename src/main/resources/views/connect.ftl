@@ -6,7 +6,7 @@
         <link rel="icon" type="image/ico" href="/assets/images/favicon.ico" />
         <link rel="stylesheet" media="screen" href="/assets/css/main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">-->
         <script src="/assets/javascripts/jquery-1.11.3.min.js"></script>
         <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
     </head>
@@ -41,29 +41,35 @@
                     <#if beenAdded??>
                         <#if beenAdded == "true">
                             <div class="alert alert-success" role="alert">Hoorah! You've successfully added someone to your stickerbook! Rock on.</div>
-                        <#else>
+                        <#elseif beenAdded == "false">
                             <div class="alert alert-danger" role="alert">Oh snap! They haven't been added. Do you already have this person in your stickerbook?</div>
+                        <#elseif beenAdded == "noSelfAdding">
+                            <div class="alert alert-danger" role="alert">Woah! You can't add yourself! It's not cricket.</div>
                         </#if>
                     <#else>
 
                     </#if>
 
-                    <form role="form" method="POST" action="${("/connect/" + targetPerson + "/add")!"/oops"}">
-                        <#if error??>
-                            <div class="alert alert-danger">
-                                <span class="glyphicon glyphicon-remove"></span>${error}
+                    <#if isLoggedIn == "false">
+                        <form role="form" method="POST" action="${("/connect/" + targetPerson + "/login")!""}">
+                            <#if error??>
+                                <div class="alert alert-danger">
+                                    <span class="glyphicon glyphicon-remove"></span>${error}
+                                </div>
+                            </#if>
+
+                            <div class="form-group">
+                                <label>Email address</label>
+                                <input class="form-control" type="email" name="email" placeholder="Enter email" value="${email!""}" required>
                             </div>
-                        </#if>
 
-                        <p>To add someone to your digital stickerbook then enter the email address your account is connected to and press enter.</p>
-
-                        <div class="form-group">
-                            <label>Your Email address:</label>
-                            <input class="form-control" type="email" name="email" placeholder="Enter email" value="${email!""}" required>
-                        </div>
-
-                        <input id="login" class="btn btn-primary btn-lg btn-block" type="submit" value="Add to Stickerbook">
-                    </form>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input class="form-control" type="password" name="password" placeholder="Enter password" value="${password!""}" required>
+                            </div>
+                            <input id="login" class="btn btn-primary btn-lg btn-block" type="submit" value="Login">
+                        </form>
+                    </#if>
                 </div>
             </div>
         </div>
