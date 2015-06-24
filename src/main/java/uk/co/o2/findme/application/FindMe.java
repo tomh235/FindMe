@@ -8,6 +8,9 @@ import uk.co.o2.findme.model.RegistrationModel;
 import uk.co.o2.findme.model.SaltAndHashModel;
 import uk.co.o2.findme.model.SearchModel;
 
+import java.io.InputStream;
+import java.util.Properties;
+
 final public class FindMe {
 
     private static FindMe findme = createFindMe();
@@ -28,6 +31,7 @@ final public class FindMe {
         this.registrationModel = registrationModel;
         this.saltAndHashModel = saltAndHashModel;
         this.personModel = personModel;
+
     }
 
     public static FindMe findme() {
@@ -35,6 +39,8 @@ final public class FindMe {
     }
 
     private static FindMe createFindMe() {
+
+
 
         SearchResultsPersonModelMapper searchResultsPersonModelMapper = new SearchResultsPersonModelMapper();
 

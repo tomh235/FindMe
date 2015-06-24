@@ -3,19 +3,20 @@
 <html>
     <head profile="http://www.w3.org/2005/10/profile">
         <title>Registration | Find Me</title>
-        <link rel="icon" type="image/ico" href="/assets/images/favicon.ico" />
-        <link rel="stylesheet" media="screen" href="/assets/css/main.css">
+        <link rel="icon" type="image/ico" href="/FindMe/assets/images/favicon.ico" />
+        <link rel="stylesheet" media="screen" href="/FindMe/assets/css/main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-        <script src="/assets/javascripts/jquery-1.11.3.min.js"></script>
-        <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+        <script src="/FindMe/assets/javascripts/jquery-1.11.3.min.js"></script>
+        <link href="/FindMe/assets/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
         <!-- Fixed navbar -->
                 <nav class="navbar navbar-default navbar-fixed-top">
                   <div class="container">
                     <div class="navbar-header">
-                      <a class="navbar-brand" href="/">Find Me</a>
+                        <a class="navbar-brand" href="FindMe"><img alt="O2" id="o2-logo" src="http://static.o2.co.uk/shared/img/logo-o2.svg"></a>
+                        <a class="navbar-brand" href="/">Find Me</a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                       <ul class="nav navbar-nav">
@@ -36,7 +37,7 @@
                 <div class="col-md-6 col-md-offset-3 form">
                     <h1>Account Registration</h1>
                     <br>
-                    <p>Have an existing account -> <a href="/login">Login</a></p>
+                    <p>Have an existing account -> <a href="/FindMe/login">Login</a></p>
                     <br>
                     <p>Use this form to register for an account to be created for yourself when the Find Me application is complete.</p>
                     <hr>
@@ -55,7 +56,7 @@
                             <h5>${statusError}</h5>
                         </div>
                     </#if>
-                    <form role="form" method="post" action="/register">
+                    <form role="form" method="post" action="/FindMe/register">
                         <div class="form-group">
                             <#if (errors["personInformation.name"])??>
                                 <div class="alert alert-danger">
@@ -96,19 +97,7 @@
                         </div>
 
                         <label>Current Team</label>
-                            <select class="form-control" name="team" required>
-                                    <option value="The Lab">The Lab</option>
-                                    <option value="Digital ID">Digital ID</option>
-                                    <option value="Kentucky">Kentucky</option>
-                                    <option value="My O2">My O2</option>
-                                    <option value="Kanban">Kanban</option>
-                                    <option value="SMIP">SMIP</option>
-                                    <option value="Support Team">Support Team</option>
-                                    <option value="Business Website">Business Website</option>
-                                    <option value="SMB Digital Small Change Scrum">SMB Digital Small Change Scrum</option>
-                                    <option value="CVOS">CVOS</option>
-                                    <option value="Online at the Highstreet">Online at the Highstreet</option>
-                            </select>
+                        <input class="form-control" type="text" name="team" placeholder="Enter your current team" value="${(personInformation.teamName)!""}" required>
 
                         <br>
                         <div class="form-group">

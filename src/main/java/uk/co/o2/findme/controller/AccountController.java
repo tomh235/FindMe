@@ -33,7 +33,7 @@ public class AccountController {
                     final PersonDAO person = personModel.getPersonById(personID);
                     final String numberOfStickers = personModel.getStickerBookNumber(loginCookie.getValue());
                     final boolean hasPlayed = personModel.getIfCompetedFor(loginCookie.getValue());
-                    final String QRCodeLink = "localhost:9000/person/" + loginCookie.getValue();
+                    final String QRCodeLink = "https://ec2-52-11-9-103.us-west-2.compute.amazonaws.com:8443/FindMe/connect/" + loginCookie.getValue();
                     Map<String, Object> model = new HashMap();
                     model.put("person", person);
                     model.put("stickerCount", numberOfStickers);

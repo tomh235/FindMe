@@ -2,7 +2,7 @@
 <div class="container">
     <#if !persons?has_content>
             <div class="col-md-8 col-md-offset-2">
-                <h1 class="no-results search"><img src="/assets/images/smiley_sad.png" height="55" />No results found!</h1>
+                <h1 class="no-results search"><img src="/FindMe/assets/images/smiley_sad.png" height="55" />No results found!</h1>
             </div>
         </div>
     <#else>
@@ -31,12 +31,12 @@
 
 
                     <div class="col-md-3 col-sm-4 entry">
-                        <a href="/person/${result.personId}">
+                        <a href="/FindMe/person/${result.personId}">
                         <div class="imgWrapper f0f8fc" style="border: 15px solid rgb(240, 248, 252)">
                             <img class="avatar" src="${result.picture}"/>
                         </div>
                         <h4 class="text-center entryName">
-                            <a href="/person/${result.personId}">${result.firstName} ${result.lastName}</a>
+                            <a href="/FindMe/person/${result.personId}">${result.firstName} ${result.lastName}</a>
                         </h4>
                         <h5 class="text-center teamName">
                             ${result.jobTitle}

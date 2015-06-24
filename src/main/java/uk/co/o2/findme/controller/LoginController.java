@@ -35,7 +35,7 @@ public class LoginController {
                 if (!personModel.isValidPersonID(loginCookie.getValue())) {
                     return Response.ok().entity(new Viewable("/login.ftl")).build();
                 } else {
-                    return Response.seeOther(new URI("/")).build();
+                    return Response.seeOther(new URI("/FindMe")).build();
                 }
             }
         } catch (NullPointerException e) {
@@ -65,10 +65,10 @@ public class LoginController {
                 //String sessionValue = personModel.getEncryptedSessionId(email);
                 String sessionValue = personModel.getPersonIdByEmail(email);
 
-                NewCookie loginCookie = new NewCookie("findmeLoggedIn", sessionValue);
+                NewCookie loginCookie = new NewCookie("findmeLoggedIn", sessionValue, null, null, "FindMe Session Cookie", -1, true);
                 URI homepage = null;
                 try {
-                    homepage = new URI("/");
+                    homepage = new URI("/FindMe");
                 } catch (URISyntaxException e) {
                     e.printStackTrace();
                 }

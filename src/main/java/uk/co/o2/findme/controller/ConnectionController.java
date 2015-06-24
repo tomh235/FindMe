@@ -24,7 +24,7 @@ public class ConnectionController {
     private final SaltAndHashModel saltAndHashModel = FindMe.findme().saltAndHashModel;
 
     @GET
-    public Response overview(@CookieParam(value = "findmeLoggedIn") Cookie loginCookie, @PathParam("id") String id) {
+    public Response connect(@CookieParam(value = "findmeLoggedIn") Cookie loginCookie, @PathParam("id") String id) {
         Map<String, Object> model = new HashMap<String, Object>();
         Response response = null;
 
@@ -40,7 +40,7 @@ public class ConnectionController {
                     response = Response.ok().entity(new Viewable("/connect.ftl", model)).build();
                 } else {
                     model.put("isLoggedIn", "true");
-                    response = Response.seeOther(new URI("/connect/" + id + "/add")).build();
+                    response = Response.seeOther(new URI("/FindMe/connect/" + id + "/add")).build();
                 }
             }
         } catch (NullPointerException e) {
@@ -79,7 +79,7 @@ public class ConnectionController {
                 NewCookie loginCookie = new NewCookie("findmeLoggedIn", sessionValue);
                 URI homepage = null;
                 try {
-                    homepage = new URI("/connect/" + id + "/add");
+                    homepage = new URI("/FindMe/connect/" + id + "/add");
                 } catch (URISyntaxException e) {
                     e.printStackTrace();
                 }

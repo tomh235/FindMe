@@ -3,13 +3,12 @@
 <html>
     <head profile="http://www.w3.org/2005/10/profile">
         <title>Daily Competition | Find Me</title>
-        <link rel="icon" type="image/ico" href="/assets/images/favicon.ico" />
-        <link rel="stylesheet" media="screen" href="/assets/css/main.css">
+        <link rel="icon" type="image/ico" href="/FindMe/assets/images/favicon.ico" />
+        <link rel="stylesheet" media="screen" href="/FindMe/assets/css/main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <script src="/FindMe/assets/javascripts/jquery-1.11.3.min.js"></script>
+        <link href="/FindMe/assets/css/bootstrap.min.css" rel="stylesheet">
 
     </head>
     <body>
@@ -23,15 +22,15 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                       </button>
-                      <a class="navbar-brand" href="/"><img alt="O2" id="o2-logo" src="http://static.o2.co.uk/shared/img/logo-o2.svg"></a>
-                      <a class="navbar-brand" href="/">Find Me</a>
+                      <a class="navbar-brand" href="/FindMe"><img alt="O2" id="o2-logo" src="http://static.o2.co.uk/shared/img/logo-o2.svg"></a>
+                      <a class="navbar-brand" href="/FindMe">Find Me</a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                       <ul class="nav navbar-nav">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/stickerBook">Sticker book <span class="badge">${(stickerCount)!"-"}</span></a></li>
+                        <li><a href="/FindMe">Home</a></li>
+                        <li><a href="/FindMe/stickerBook">Sticker book <span class="badge">${(stickerCount)!"-"}</span></a></li>
                         <li>
-                            <a href="/competition">Daily Competition
+                            <a href="/FindMe/competition">Daily Competition
                                 <#if hasPlayed == true>
 
                                 <#elseif hasPlayed == false>
@@ -39,15 +38,15 @@
                                 </#if>
                             </a>
                         </li>
-                        <li class="active"><a href="/leaderboards">Leaderboards</a></li>
+                        <li class="active"><a href="/FindMe/leaderboards">Leaderboards</a></li>
                       </ul>
 
                       <ul class="nav navbar-nav navbar-right">
                               <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Hello ${(currentUser.firstName)!""} <span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
-                                  <li><a href="/account">Your Account</a></li>
-                                  <li><a href="/logout">Logout</a></li>
+                                  <li><a href="/FindMe/account">Your Account</a></li>
+                                  <li><a href="/FindMe/logout">Logout</a></li>
                                 </ul>
                               </li>
                             </ul>
@@ -119,6 +118,7 @@
                 </div>
             </div>
         </div>
+        <script src="/FindMe/assets/javascripts/bootstrap.min.js"></script>
         <script>
             function toggleDiv() {
                 $("#infoContent").toggle();

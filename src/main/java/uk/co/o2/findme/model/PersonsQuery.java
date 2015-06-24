@@ -2,9 +2,12 @@ package uk.co.o2.findme.model;
 
 import uk.co.o2.findme.dao.*;
 
+import javax.xml.crypto.Data;
+import java.io.InputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 
 /**
@@ -14,7 +17,7 @@ public class PersonsQuery {
 
     // JDBC driver name and database URL TODO: needs to be secured and exported
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    static final String DB_URL = "jdbc:mysql://localhost:3306/findme";
+    static final String DB_URL = "jdbc:mysql://ec2-52-11-9-103.us-west-2.compute.amazonaws.com:3306/findme";
 
     // Database credentials
 

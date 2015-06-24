@@ -68,7 +68,7 @@ public class SignUpController {
             model.put("hasPlayed", false);
             //String sessionValue = personModel.getEncryptedSessionId(email);
             String sessionValue = personModel.getPersonIdByEmail(email);
-            NewCookie loginCookie = new NewCookie("findmeLoggedIn", sessionValue);
+            NewCookie loginCookie = new NewCookie("findmeLoggedIn", sessionValue, null, null, "FindMe Session Cookie", -1, true);
             Viewable existing = new Viewable("/successfulRegistration.ftl", model);
             Response.ResponseBuilder response = Response.ok().entity(existing).cookie(loginCookie);
             return response.build();

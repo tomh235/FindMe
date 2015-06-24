@@ -33,10 +33,11 @@
   <component name="GradleLocalSettings">
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$/../../facewall" value="5714001888168" />
-        <entry key="$PROJECT_DIR$/../Ecom_eShop" value="24291621809147" />
-        <entry key="$PROJECT_DIR$/../FindMe" value="4294315948619" />
-        <entry key="$PROJECT_DIR$" value="4299379354350" />
+        <entry key="$PROJECT_DIR$" value="2868707673036" />
+        <entry key="$PROJECT_DIR$/../facewall" value="5714001888168" />
+        <entry key="$PROJECT_DIR$/../o2/Ecom_eShop" value="24291621809147" />
+        <entry key="$PROJECT_DIR$/../o2/FindMe" value="4294315948619" />
+        <entry key="$PROJECT_DIR$/../o2/TALENTUM_Find_Me" value="4299379354350" />
       </map>
     </option>
   </component>

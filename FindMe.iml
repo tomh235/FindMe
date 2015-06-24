@@ -98,16 +98,10 @@
     <orderEntry type="library" scope="TEST" name="Gradle: org.apache.servicemix.bundles:org.apache.servicemix.bundles.jline:0.9.94_1" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.apache.lucene:lucene-core:3.6.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: commons-io:commons-io:1.4" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.testng:testng:6.9.4" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: org.beanshell:bsh:2.0b4" level="project" />
+    <orderEntry type="library" exported="" name="Gradle: com.beust:jcommander:1.48" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.neo4j:neo4j-kernel:1.9.8" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: org.neo4j.app:neo4j-server:1.9.8" level="project" />
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$APPLICATION_HOME_DIR$/plugins/testng/lib/testng.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
   </component>
 </module>

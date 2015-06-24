@@ -74,7 +74,7 @@ public class OverviewController {
         NewCookie loginCookie = new NewCookie("findmeLoggedIn", "null");
         URI login = null;
         try {
-            login = new URI("/login");
+            login = new URI("/FindMe/login");
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
