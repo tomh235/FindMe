@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3055c1e9-876b-4af4-a627-d8a1178946e3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AWS/findMeKeyStore.jks" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AWS/competitionEvent.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AWS/dbSetUp.sql" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AWS/findme.pem" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/DatabaseConfiguration.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/DatabaseConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/PersonsQuery.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/PersonsQuery.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/RegistrationQuery.java" afterPath="$PROJECT_DIR$/src/main/java/uk/co/o2/findme/model/RegistrationQuery.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/views/account.ftl" afterPath="$PROJECT_DIR$/src/main/resources/views/account.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/views/connect.ftl" afterPath="$PROJECT_DIR$/src/main/resources/views/connect.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/views/dailycompetition.ftl" afterPath="$PROJECT_DIR$/src/main/resources/views/dailycompetition.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/views/digitalStickerBook.ftl" afterPath="$PROJECT_DIR$/src/main/resources/views/digitalStickerBook.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/views/homepage.ftl" afterPath="$PROJECT_DIR$/src/main/resources/views/homepage.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/views/leaderboards.ftl" afterPath="$PROJECT_DIR$/src/main/resources/views/leaderboards.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/views/login.ftl" afterPath="$PROJECT_DIR$/src/main/resources/views/login.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/views/registrationForm.ftl" afterPath="$PROJECT_DIR$/src/main/resources/views/registrationForm.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/views/showAllResults.ftl" afterPath="$PROJECT_DIR$/src/main/resources/views/showAllResults.ftl" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/views/successfulRegistration.ftl" afterPath="$PROJECT_DIR$/src/main/resources/views/successfulRegistration.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AWS/mysql_details" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AWS/server.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AWS/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FindMe.iws" />
@@ -127,8 +113,8 @@
       <file leaf-file-name="connect.ftl" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/views/connect.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14285715" vertical-offset="0" max-vertical-offset="1548">
-              <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.6571429" vertical-offset="0" max-vertical-offset="1548">
+              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1643,8 +1629,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="5658" max-vertical-offset="30024">
           <caret line="461" column="15" selection-start-line="461" selection-start-column="12" selection-end-line="461" selection-end-column="15" />
           <folding>
-            <element signature="e#16609#16610#0" expanded="true" />
-            <element signature="e#16657#16658#0" expanded="true" />
+            <element signature="e#16609#16610#0" expanded="false" />
+            <element signature="e#16657#16658#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1766,8 +1752,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/views/connect.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14285715" vertical-offset="0" max-vertical-offset="1548">
-          <caret line="5" column="56" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
+        <state vertical-scroll-proportion="0.6571429" vertical-offset="0" max-vertical-offset="1548">
+          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
