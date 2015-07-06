@@ -4,6 +4,8 @@ public class DatabaseConfiguration {
 
     // TODO: Secure mysql database passwords
 
+    public static String db_url = System.getProperty("db_url", "jdbc:mysql://ec2-54-171-90-242.eu-west-1.compute.amazonaws.com:3306/findme");
+
     public static String db_username = System.getProperty("db_username", "findme");
     public static String db_pass = System.getProperty("db_pass", "531c1474-d88a-4a73-bd36-e7e3cea8050a");
 

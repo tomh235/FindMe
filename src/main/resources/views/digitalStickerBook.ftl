@@ -3,6 +3,7 @@
 <html>
     <head profile="http://www.w3.org/2005/10/profile">
         <title>Digital Sticker Book | Find Me</title>
+         <meta contentType="text/html; charset="UTF-8"/>
         <link rel="icon" type="image/ico" href="/FindMe/assets/images/favicon.ico" />
         <link rel="stylesheet" media="screen" href="/FindMe/assets/css/main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">

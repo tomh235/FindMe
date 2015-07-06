@@ -17,7 +17,7 @@ public class PersonsQuery {
 
     // JDBC driver name and database URL TODO: needs to be secured and exported
     static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    static final String DB_URL = "jdbc:mysql://ec2-52-11-9-103.us-west-2.compute.amazonaws.com:3306/findme";
+    static final String DB_URL = DatabaseConfiguration.db_url;
 
     // Database credentials
 
