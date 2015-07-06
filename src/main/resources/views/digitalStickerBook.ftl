@@ -63,8 +63,8 @@
                         <h1>Your Digital Sticker Book</h1>
                         <br>
                         <p>This is your very own sticker book (yay)! Scan the QR codes of the people you meet to get their pictures in your book.</p>
-                        <p>Remember! By doing so you get the chance to rank up on the <a href="/leaderboards">leaderboard</a> and win prizes!</p>
-                        <p>Oh jolly! I've forgotten the rules for this and what the special bonus stuff is! <a href="">Help!</a></p>
+                        <p>Remember! By doing so you get the chance to rank up on the <a href="/FindMe/leaderboards">leaderboard</a> and win prizes!</p>
+                        <p>Oh jolly! I've forgotten the rules for this and what the special bonus stuff is! <a href="/FindMe/help">Help!</a></p>
                         <hr>
                         <br>
                     </div>

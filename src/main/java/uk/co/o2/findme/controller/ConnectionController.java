@@ -76,7 +76,7 @@ public class ConnectionController {
                 //String sessionValue = personModel.getEncryptedSessionId(email);
                 String sessionValue = personModel.getPersonIdByEmail(email);
                 System.out.println("The account is happy");
-                NewCookie loginCookie = new NewCookie("findmeLoggedIn", sessionValue);
+                NewCookie loginCookie = new NewCookie("findmeLoggedIn", sessionValue, null, null, "FindMe Session Cookie", -1, true);
                 URI homepage = null;
                 try {
                     homepage = new URI("/FindMe/connect/" + id + "/add");

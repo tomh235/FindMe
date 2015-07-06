@@ -25,15 +25,27 @@ public class StickerBookController {
 
     @GET
     public Response getPerson(@CookieParam(value = "findmeLoggedIn") Cookie loginCookie) {
-        final PersonDAO currentUser = personModel.getPersonById(loginCookie.getValue());
-        final String numberOfStickers = personModel.getStickerBookNumber(loginCookie.getValue());
-        final boolean hasPlayed = personModel.getIfCompetedFor(loginCookie.getValue());
-        final List<StickerBookPersonDAO> stickerBookPersonList = personModel.getPeopleInStickerBookFor(loginCookie.getValue());
-        Map<String, Object> model = new HashMap();
-        model.put("currentUser", currentUser);
-        model.put("stickerCount", numberOfStickers);
-        model.put("hasPlayed", hasPlayed);
-        model.put("stickerBookPersonList", stickerBookPersonList);
-        return Response.ok().entity(new Viewable("/digitalStickerBook.ftl", model)).build();
+        try {
+            if (loginCookie == null || loginCookie.getValue().equals("null")) {
+                return Response.ok().entity(new Viewable("/login.ftl")).build();
+            } else {
+                if (!personModel.isValidPersonID(loginCookie.getValue())) {
+                    return Response.ok().entity(new Viewable("/login.ftl")).build();
+                } else {
+                    final PersonDAO currentUser = personModel.getPersonById(loginCookie.getValue());
+                    final String numberOfStickers = personModel.getStickerBookNumber(loginCookie.getValue());
+                    final boolean hasPlayed = personModel.getIfCompetedFor(loginCookie.getValue());
+                    final List<StickerBookPersonDAO> stickerBookPersonList = personModel.getPeopleInStickerBookFor(loginCookie.getValue());
+                    Map<String, Object> model = new HashMap();
+                    model.put("currentUser", currentUser);
+                    model.put("stickerCount", numberOfStickers);
+                    model.put("hasPlayed", hasPlayed);
+                    model.put("stickerBookPersonList", stickerBookPersonList);
+                    return Response.ok().entity(new Viewable("/digitalStickerBook.ftl", model)).build();
+                }
+            }
+        } catch (NullPointerException e) {
+            return Response.ok().entity(new Viewable("/login.ftl")).build();
+        }
     }
 }

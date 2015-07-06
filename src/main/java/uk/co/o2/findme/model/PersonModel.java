@@ -3,6 +3,7 @@ package uk.co.o2.findme.model;
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
 import uk.co.o2.findme.dao.*;
+import uk.co.o2.findme.mapper.SearchResultsPersonModelMapper;
 
 import javax.crypto.*;
 import javax.crypto.spec.SecretKeySpec;
@@ -17,19 +18,25 @@ import java.util.List;
 public class PersonModel {
 
     private PersonsQuery personsQuery = new PersonsQuery();
+    SearchResultsPersonModelMapper searchResultsModelMapper;
 
     private static final String ALGO = "AES";
     private static final byte[] keyValue =
             new byte[] { 'd', 'q', 'h', 'G', 'D', 'x', 'a','j', 'i', 'C', 'l','S', 'Q', 'Z', 'g', 'y' };
 
 
-    public PersonModel() {
-
+    public PersonModel(SearchResultsPersonModelMapper searchResultsModelMapper) {
+        this.searchResultsModelMapper = searchResultsModelMapper;
     }
 
     public PersonDAO getPersonById(String personID) {
         PersonDAO person = personsQuery.searchByPersonIdOf(personID);
         return person;
+    }
+
+    public List<PersonDAO> getAllPersons() {
+        List<PersonDAO> personList = personsQuery.getAllPersons();
+        return personList;
     }
 
     public String getStickerBookNumber(String personID) {

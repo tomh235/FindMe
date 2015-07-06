@@ -50,7 +50,7 @@ final public class FindMe {
 
         RegistrationModel registrationModel = new RegistrationModel();
         SaltAndHashModel saltAndHashModel = new SaltAndHashModel();
-        PersonModel personModel = new PersonModel();
+        PersonModel personModel = new PersonModel(searchResultsPersonModelMapper);
 
         return new FindMe(searchModel, registrationModel, saltAndHashModel, personModel);
     }

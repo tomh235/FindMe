@@ -97,6 +97,78 @@ public class PersonsQuery {
         return personList;
     }
 
+    public List<PersonDAO> getAllPersons() {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        List<PersonDAO> personList = new ArrayList<PersonDAO>();
+
+        try{
+            //STEP 2: Register JDBC driver
+            Class.forName("com.mysql.jdbc.Driver");
+
+            //STEP 3: Open a connection
+            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+
+            //STEP 4: Execute a query and add results to list
+            /*String sql = "SELECT p.idPerson, p.firstName, p.lastName, p.photo, p.emailAddress, p.areaCode, p.phoneNumber, p.jobTitle, p.details, p.currentProject, p.location, t.teamName, pt.status FROM persons p " +
+            "LEFT JOIN personTeams pt ON p.idPerson = pt.Persons_idPerson " +
+            "JOIN teams t ON pt.Teams_idTeams = t.idTeams " +
+            "WHERE CONCAT(p.firstName, ' ', p.lastName) LIKE ?";*/
+
+            String sql = "SELECT p.idPerson, p.firstName, p.lastName, p.photo, p.emailAddress, p.areaCode, p.phoneNumber, p.jobTitle, p.details, p.currentTeam, p.currentProject, p.location, p.currentTeam, p.status " +
+                    "FROM persons p";
+
+            pstmt = conn.prepareStatement(sql);
+
+            ResultSet rs = pstmt.executeQuery();
+
+            while(rs.next())
+            {
+                PersonDAO person =
+                        new PersonDAO(
+                                rs.getString("p.idPerson"),
+                                rs.getString("p.firstName"),
+                                rs.getString("p.lastName"),
+                                rs.getString("p.photo"),
+                                rs.getString("p.emailAddress"),
+                                rs.getString("p.areaCode"),
+                                rs.getString("p.phoneNumber"),
+                                rs.getString("p.jobTitle"),
+                                rs.getString("p.details"),
+                                rs.getString("p.currentProject"),
+                                rs.getString("p.location"),
+                                rs.getString("p.currentTeam"),
+                                rs.getString("p.status"));
+                personList.add(person);
+            }
+
+            //STEP 5: Clean-up environment
+            rs.close();
+            pstmt.close();
+            conn.close();
+        }catch(SQLException se){
+            //Handle errors for JDBC
+            se.printStackTrace();
+        }catch(Exception e){
+            //Handle errors for Class.forName
+            e.printStackTrace();
+        }finally{
+            //finally block used to close resources
+            try{
+                if(pstmt != null)
+                    pstmt.close();
+            }catch(SQLException se2){
+            }// nothing we can do
+            try{
+                if(conn != null)
+                    conn.close();
+            }catch(SQLException se){
+                se.printStackTrace();
+            }//end finally try
+        }//end try
+        return personList;
+    }
+
     public List<GameDataObject> getAllPersonsForGameLeaderBoard() {
         Connection conn = null;
         PreparedStatement pstmt = null;
@@ -893,7 +965,7 @@ public class PersonsQuery {
             Class.forName("com.mysql.jdbc.Driver");
 
             //STEP 3: Open a connection
-            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+            conn = DriverManager.getConnection(DB_URL, DatabaseConfiguration.db_username2, DatabaseConfiguration.db_pass2);
 
             //STEP 4: Execute a query and add results to list
             String sql = "SELECT idPerson, emailAddress FROM persons " +

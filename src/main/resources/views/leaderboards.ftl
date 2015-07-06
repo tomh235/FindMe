@@ -66,9 +66,14 @@
                             <br>
                             <br>
                             <div class="spacing">
+                                <p>To view the leaderboards please click on the title for the boards you want to see.</p>
+
                                 <!-- Table -->
-                                <h5>Competition Leaderboard</h5>
-                                <table class="table displayBoard">
+
+                                <div class="alert"><h4 id="competitionToggle">Competition Leaderboard <i class="fa fa-chevron-circle-down"></i></h4></div>
+
+                                <div id="competitionTable">
+                                    <table class="table displayBoard">
                                         <thead>
                                           <tr>
                                             <th>Name</th>
@@ -86,15 +91,18 @@
                                             </tr>
                                             </#list>
                                         </tbody>
-                                      </table>
+                                    </table>
+                                </div>
 
                                 <br>
                                 <br>
                                 <br>
 
-                                <h5>StickerBook Leaderboard</h5>
+                                <div class="alert"><h4 id="stickerBookToggle">StickerBook Leaderboard <i class="fa fa-chevron-circle-down"></i></h4></div>
+
+                                <div id="stickerBookTable">
                                 <!-- Table -->
-                                <table class="table displayBoard">
+                                    <table class="table displayBoard">
                                         <thead>
                                           <tr>
                                             <th>Name</th>
@@ -113,16 +121,21 @@
                                             </#list>
                                         </tbody>
                                       </table>
+                                <div>
                             </div>
                     </div>
                 </div>
             </div>
         </div>
         <script src="/FindMe/assets/javascripts/bootstrap.min.js"></script>
-        <script>
-            function toggleDiv() {
-                $("#infoContent").toggle();
-            }
+        <script type="text/javascript">
+            $("#competitionToggle").click(function () {
+               $('#competitionTable').slideToggle();
+            });
+
+            $("#stickerBookToggle").click(function () {
+               $('#stickerBookTable').slideToggle();
+            });
         </script>
     </body>
 </html>

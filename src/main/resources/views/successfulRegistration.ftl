@@ -7,9 +7,8 @@
         <link rel="stylesheet" media="screen" href="/FindMe/assets/css/main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-        <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <script src="/FindMe/assets/javascripts/jquery-1.11.3.min.js"></script>
+        <link href="/FindMe/assets/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
         <!-- Fixed navbar -->
@@ -86,7 +85,7 @@
                     <p>Before you know it everyone in O2 IT will be stored in this database. Contractors and all!</p>
                     <p>Key places to explore will be the <strong>Daily Competition</strong> and your <strong>Sticker Book</strong> so allow you to get to the top of the leaderboards!</p>
                     <p>For being so kind to register anyway - could you fill out the quick survey in the link below to give us your feedback, expectations or gripes.</p>
-                    <a href="" id="surveyLink"><h6>Link to Survey</h6></a>
+                    <a href="https://docs.google.com/forms/d/157Xx5HIJIrabrxAwr6dsZHTY2CreVEG0aOSXZs0YgAU/viewform" id="surveyLink"><h6>Link to Survey</h6></a>
                     <p>Be as honest as you like - transparancy is key! :-)</p>
                 </div>
             </div>

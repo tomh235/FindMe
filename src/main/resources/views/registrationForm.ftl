@@ -15,8 +15,8 @@
                 <nav class="navbar navbar-default navbar-fixed-top">
                   <div class="container">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="FindMe"><img alt="O2" id="o2-logo" src="http://static.o2.co.uk/shared/img/logo-o2.svg"></a>
-                        <a class="navbar-brand" href="/">Find Me</a>
+                        <a class="navbar-brand" href="/FindMe"><img alt="O2" id="o2-logo" src="http://static.o2.co.uk/shared/img/logo-o2.svg"></a>
+                        <a class="navbar-brand" href="/FindMe">Find Me</a>
                     </div>
                     <div id="navbar" class="navbar-collapse collapse">
                       <ul class="nav navbar-nav">

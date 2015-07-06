@@ -59,7 +59,6 @@ public class LoginController {
                 model.put("email", email);
                 model.put("error", "Invalid email address or password.");
                 Viewable failedLogin = new Viewable("/login.ftl", model);
-                System.out.println("Failed on wrong password");
                 return Response.ok().entity(failedLogin).build();
             } else {
                 //String sessionValue = personModel.getEncryptedSessionId(email);

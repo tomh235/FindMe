@@ -2,7 +2,7 @@
 
 <html>
     <head profile="http://www.w3.org/2005/10/profile">
-        <title>Find Me | Find 'em!</title>
+        <title>Find Me | Show All</title>
         <link rel="icon" type="image/ico" href="/FindMe/assets/images/favicon.ico" />
         <link rel="stylesheet" media="screen" href="/FindMe/assets/css/main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -55,50 +55,63 @@
         <br>
         <br>
         <div class="container">
+            <#assign resultsCount = persons?size>
             <div class="row">
                 <div class="col-md-8 col-md-offset-2">
-                    <div class="input-group input-group-lg entry-area-start" id="searchBar">
-                        <span class="input-group-btn find-me">
-                            <p>Find Me</p>
-                        </span>
-                        <input tabindex="1" id="searchInput" type="text" name="keywords" class="form-control icon-search" placeholder="Search by person">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
-                        </span>
-                    </div>
                     <div class="centered">
                         <br>
+                        <a href="/FindMe"><button type="button" class="btn btn-default">Back to Home</button></a>
                         <br>
-                        <a href="/FindMe/showAll"><button type="button" class="btn btn-default">Show All</button></a>
-                        <br>
-                        <h4>Population<i id="usersimgPop" class="fa fa-users"></i> ${(popCount)!""}</h4>
-                        <br>
-                        <h4>Want to give feedback? <i id="usersimgPop" class="fa fa-bullhorn"></i> <a href="https://docs.google.com/forms/d/157Xx5HIJIrabrxAwr6dsZHTY2CreVEG0aOSXZs0YgAU/viewform"> Here!</a></h4>
-                        </div>
                 </div>
             </div>
 
-            <div id="quickLinks">
-                <!--<p><button class="btn btn-primary" type="button">O2</button>
-                <button class="btn btn-primary" type="button">DevO2</button>
-                <button class="btn btn-primary" type="button">Yammer</button>
-                <button class="btn btn-primary" type="button">O2 Intranet</button>
-                <button class="btn btn-primary" type="button">JIRA</button></p>-->
-            </div>
+            <div id="result">
+                <div class="container">
+                        <#if persons?has_content>
+                            <div>
+                                <br>
+                                <h1>People</h1>
+                            </div>
+                            <div class="row">
+                                <#list persons as result>
 
-            <div id="result"></div>
+
+                                    <div class="col-md-3 col-sm-4 entry">
+                                        <a href="/FindMe/person/${result.personId}">
+                                        <div class="imgWrapper f0f8fc" style="border: 15px solid rgb(240, 248, 252)">
+                                            <img class="avatar" src="${result.picture}"/>
+                                        </div>
+                                        <h4 class="text-center entryName">
+                                            <a href="/FindMe/person/${result.personId}">${(result.firstName)!"-"} ${(result.lastName)!"-"}</a>
+                                        </h4>
+                                        <h5 class="text-center teamName">
+                                            ${(result.jobTitle)!"-"}
+                                        </h5>
+                                        <h5 class="text-center teamName">
+                                            ${(result.teamName)!"-"}
+                                        </h5>
+                                        <h5 class="text-center teamName">
+                                            ${(result.location)!"-"}
+                                        </h5>
+                                        <i class="fa fa-envelope-o"></i> &nbsp; <#if result.phoneNumber == ""> <#else><i class="fa fa-phone"></i></#if>
+                                        </a>
+                                    </div>
+
+                                </#list>
+                            </div>
+                        </#if>
+                </div>
+                <script>
+                    $(document).ready(function () {
+                        $('img.avatar').fakecrop();
+                    });
+                </script>
+            </div>
         </div>
 
         <script src="/FindMe/assets/javascripts/bootstrap.min.js"></script>
         <script src="/FindMe/assets/javascripts/search-box.js"></script>
         <script src="/FindMe/assets/javascripts/jquery.fakecrop.js"></script>
-        <script>
-            var searchInput = $("#searchInput");
-            var result = $("#result");
-            searchInput.focus();
-            autoSearchOnKeyUp(searchInput, "/FindMe/results", result);
-        </script>
-
     </body>
 </html>
 

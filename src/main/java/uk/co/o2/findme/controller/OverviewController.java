@@ -13,6 +13,7 @@ import javax.ws.rs.core.Response;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static java.util.UUID.randomUUID;
@@ -67,6 +68,27 @@ public class OverviewController {
         return response.build();
     }
 
+    @GET
+    @Path("/showAll")
+    public Response showAll(@CookieParam(value = "findmeLoggedIn") Cookie loginCookie) {
+        final PersonDAO currentUser = personModel.getPersonById(loginCookie.getValue());
+        final String populationCount = personModel.getNumberOfPeopleInDatabase();
+        final String numberOfStickers = personModel.getStickerBookNumber(loginCookie.getValue());
+        final boolean hasPlayed = personModel.getIfCompetedFor(loginCookie.getValue());
+        final List<PersonDAO> personList = personModel.getAllPersons();
+
+        Map<String, Object> model = new HashMap<String, Object>();
+        model.put("currentUser", currentUser);
+        model.put("popCount", populationCount);
+        model.put("stickerCount", numberOfStickers);
+        model.put("hasPlayed", hasPlayed);
+        model.put("persons", personList);
+
+        //TODO: This looks like scala code that has been translated into java. That's fine, but this kind of java code should be avoided if possible. Hopefully we can design it away.
+        Response.ResponseBuilder response = serverError();
+            response = ok(new Viewable("/showAllResults.ftl", model));
+        return response.build();
+    }
 
     @GET
     @Path("/logout")

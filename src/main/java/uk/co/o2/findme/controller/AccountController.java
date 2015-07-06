@@ -3,6 +3,7 @@ package uk.co.o2.findme.controller;
 import net.glxn.qrgen.core.image.ImageType;
 import net.glxn.qrgen.javase.QRCode;
 import org.glassfish.jersey.server.mvc.Viewable;
+import uk.co.o2.findme.application.FindMe;
 import uk.co.o2.findme.dao.PersonDAO;
 import uk.co.o2.findme.model.PersonModel;
 
@@ -18,7 +19,7 @@ import java.util.Map;
 @Path("/account")
 public class AccountController {
 
-    PersonModel personModel = new PersonModel();
+    private final PersonModel personModel = FindMe.findme().personModel;
 
     @GET
     public Response getPerson(@CookieParam(value = "findmeLoggedIn") Cookie loginCookie) {
