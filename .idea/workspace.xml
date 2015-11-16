@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3055c1e9-876b-4af4-a627-d8a1178946e3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AWS/mysql_details" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AWS/server.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/AWS/web.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="3055c1e9-876b-4af4-a627-d8a1178946e3" name="Default" comment="" />
     <ignored path="FindMe.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/findme-database-utils/.gradle/" />
