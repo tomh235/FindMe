@@ -177,8 +177,8 @@ task copyToLib << {
 }
 
 task ('findmeDeploy', type: Exec, dependsOn:['war', 'copyToLib'], ) {
-    commandLine 'java' //-jar webapp-runner-7.0.22.jar --port 9000 ./build/libs/FindMe.war'
-    args = ['-jar', 'build/libs/webapp-runner.jar', '--port', '9000', 'build/libs/FindMe.war']
+    commandLine 'java' //-jar webapp-runner-7.0.22.jar --port 22 ./build/libs/FindMe.war'
+    args = ['-jar', 'build/libs/webapp-runner.jar', '--port', '22', 'build/libs/FindMe.war']
 }
 
 task ('buildWar', type: Exec, dependsOn:['war', 'copyToLib'], ) {
